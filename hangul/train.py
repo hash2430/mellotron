@@ -14,8 +14,9 @@ from model import Tacotron2
 from data_utils import TextMelLoader, TextMelCollate
 from loss_function import Tacotron2Loss
 from logger import Tacotron2Logger
-from hparams import create_hparams
-from text.korean import ALL_SYMBOLS, PAD, EOS
+from configs.hparams import create_hparams
+from text.korean import ALL_SYMBOLS
+
 
 def reduce_tensor(tensor, n_gpus):
     rt = tensor.clone()

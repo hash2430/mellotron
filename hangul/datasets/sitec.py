@@ -1,10 +1,9 @@
-import fnmatch
 from concurrent.futures import ProcessPoolExecutor
 from functools import partial
 import numpy as np
 import os
 from util import audio
-from hparams import hparams
+from configs.hparams import hparams
 
 
 def build_from_path(in_dir, base_dir, out_dir, hparams, num_workers=1, tqdm=lambda x: x):

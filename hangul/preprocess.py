@@ -3,7 +3,7 @@ import os
 from multiprocessing import cpu_count
 from tqdm import tqdm
 from datasets import blizzard, ljspeech, sitec, selvas
-from hparams import hparams
+from configs.hparams import hparams
 
 
 def preprocess_blizzard(args):

@@ -1,0 +1,264 @@
+/past_projects/DB/LibriTTS/train-clean-100-22050/5322/7680/5322_7680_000034_000000.wav|'I would go on an expedition any day,' said Lukashka. 'D'you hear the jackals howling?' he added, listening.|5322|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/250/142286/250_142286_000018_000000.wav|'Oh, but I will send her home in a cab.|250|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7800/283478/7800_283478_000006_000002.wav|Frank, you talk with him.|7800|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2136/5140/2136_5140_000028_000002.wav|We can only reach it through the gate of death, to which we are all tending, young and old, with sure steps.'|2136|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5393/19219/5393_19219_000043_000004.wav|Moreover, what is an obscure corner in such a submersion of joy?|5393|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4051/10927/4051_10927_000006_000004.wav|"Well, let's talk, if it's so necessary.|4051|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3486/166424/3486_166424_000042_000000.wav|He reached out, touched me.|3486|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1867/154071/1867_154071_000006_000002.wav|"That's not the one. She's all different, a pile different, Ronicky."|1867|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1970/26100/1970_26100_000016_000003.wav|When we reached the tree, the coroner examined the ground around it carefully.|1970|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5104/33406/5104_33406_000011_000000.wav|"He walks like Thor the Fearless."|5104|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8098/275181/8098_275181_000009_000000.wav|Rightly or wrongly, we attributed the mischief to a certain "silver-gray" that had several times been seen in the neighborhood that autumn.|8098|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1963/142393/1963_142393_000004_000005.wav|I'll wait patiently."|1963|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/831/130739/831_130739_000011_000005.wav|You try at least to walk your machine in an easy manner, and whack!--you are rubbing your shin.|831|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2843/152918/2843_152918_000009_000005.wav|It was heavy going, though better than on the previous day.|2843|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6529/62554/6529_62554_000067_000000.wav|"And before hunting them mercilessly, you would not wait until they had committed some fresh act of hostility against us?"|6529|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6272/70171/6272_70171_000022_000000.wav|"Mrs. Morgeson," said Charles, "the horses will be ready to take you round Rosville.|6272|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/200/126784/200_126784_000030_000000.wav|"This gentleman--here--favored us with his company during the rain, and has not yet departed."|200|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4018/103416/4018_103416_000055_000001.wav|But--he's different.|4018|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2836/5355/2836_5355_000022_000000.wav|"You deem that it was not in reason that I should aspire to be the wife of Sir Francis Levison?"|2836|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/87/121553/87_121553_000184_000000.wav|Florence, within the ancient boundary From which she taketh still her tierce and nones, Abode in quiet, temperate and chaste.|87|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3983/5371/3983_5371_000004_000002.wav|Mr. Drake and the lawyer--for the other was a lawyer--were utterly powerless to stop the catastrophe.|3983|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4195/186237/4195_186237_000056_000001.wav|"Between the two of us and Patsy, we ought to have no trouble at all."|4195|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7059/77897/7059_77897_000033_000001.wav|Jack," she called over her shoulder to the young man at the window, "do you think your uncle would approve of me as Juliet's Nurse?"|7059|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6476/96661/6476_96661_000013_000000.wav|Great timbers were cut and brought down to Pagasae, the harbor of Iolcus.|6476|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8838/298546/8838_298546_000021_000004.wav|The kick of a horse broke his thigh, and for a year he was compelled to rest himself.|8838|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2952/408/2952_408_000010_000000.wav|All then left the house, except the priest, who went to the room where the dead body was lying.|2952|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6209/34599/6209_34599_000017_000000.wav|He advanced, reeling at every step, as if on a spring board, and accomplishing, without spectators, miracles of equilibrium.|6209|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3486/166424/3486_166424_000107_000000.wav|They clustered close, their shields held before them.|3486|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3486/166424/3486_166424_000051_000000.wav|All too short was the check, but once more we held them--and again.|3486|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8312/279791/8312_279791_000036_000001.wav|The little woman listened attentively, and then, in the twinkling of an eye, became, instead of an old woman, a beautiful fairy.|8312|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7067/76048/7067_76048_000024_000003.wav|Into this topic they peered as into some deep pool, side by side, and in it they saw each other reflected.|7067|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8609/262281/8609_262281_000008_000001.wav|"Why did you come down half-dressed, my dear?"|8609|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7067/76048/7067_76048_000068_000006.wav|But passion was a thing men and women fell back upon when they had nothing else in common.|7067|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6272/70191/6272_70191_000002_000016.wav|He wept often, confiding to me his grief and his plans for the future.|6272|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6181/216552/6181_216552_000055_000000.wav|Because justice was supposed to be its principle.|6181|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7178/34645/7178_34645_000034_000005.wav|He was the artificer.|7178|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4680/16026/4680_16026_000017_000001.wav|He redoubled his pace.|4680|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1970/10594/1970_10594_000028_000000.wav|"And did she?|1970|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8238/283452/8238_283452_000006_000000.wav|BY|8238|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4397/15678/4397_15678_000004_000001.wav|Nor in your walks in the woods will you be likely to see many of the wild animals, however far you may go, with the exception of the Douglas squirrel and the mountain goat.|4397|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1116/132851/1116_132851_000042_000000.wav|In the evening she returned to the farm more angry than ever, and quite determined to revenge herself on the brownie whenever she had the chance, which happened to be very soon.|1116|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8108/280354/8108_280354_000015_000001.wav|For this was one of the feasts of Bacchus, and the women were celebrating his rites, wandering over the mountains with dance and revel.|8108|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6209/34601/6209_34601_000012_000000.wav|The head began again,--|6209|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/460/172359/460_172359_000057_000000.wav|It just shows the difference between people.|460|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8419/293473/8419_293473_000013_000003.wav|The Tree Frog was also out, sitting in a cool, damp corner of the grass rows.|8419|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8088/284756/8088_284756_000170_000003.wav|Then they made what I understood was a fire, although the girl was able to visualize it only as a bright red spot that flickered.|8088|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1867/148436/1867_148436_000073_000000.wav|"The minute he seen that he stopped fightin' and started off at a gallop the way the tenderfoot wanted him to go, which was over there.|1867|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8098/278278/8098_278278_000017_000004.wav|After Pod had explained the meaning of the word "blaze" in this case, the fellow was more put out than the fire.|8098|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1116/132847/1116_132847_000022_000000.wav|So Houarn went down to the sea, and found a boatman who engaged to take him to the isle of Lok.|1116|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7190/90542/7190_90542_000057_000002.wav|It's a deal nearer as the crow flies."|7190|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2952/408/2952_408_000025_000000.wav|No sooner had the hermit uttered this petition than he disappeared; and the hermitage also disappeared at the same instant.|2952|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6836/61804/6836_61804_000013_000002.wav|Such, in reality, was Sir Maurice Gerald--erst known as Maurice the mustanger!|6836|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7511/102420/7511_102420_000017_000003.wav|Though I don't admire them, they are considered valuable; however, his elk was a cow, and they don't have as nice teeth as do bulls.|7511|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6529/62556/6529_62556_000086_000001.wav|It was folded and fastened to Top's collar in a conspicuous position.|6529|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1867/154071/1867_154071_000033_000000.wav|"Ain't there?|1867|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8324/286683/8324_286683_000028_000001.wav|"I shall let you play all the rest of the day, but I shall choose the games.|8324|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4051/11218/4051_11218_000014_000000.wav|"That is already accomplished, may it please your majesty," replied Jason.|4051|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7505/83618/7505_83618_000009_000002.wav|From the lake he journeyed westward, not without adventures, for he was attacked with murderous intent by the beings whom he had created.|7505|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3982/178459/3982_178459_000060_000000.wav|"Not you--oh no!"|3982|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7302/86815/7302_86815_000065_000000.wav|"No!"|7302|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6848/76049/6848_76049_000003_000007.wav|But suppose she was not all ordinary female person....|6848|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6209/34601/6209_34601_000092_000002.wav|Ursus muttered, "This building is badly joined.|6209|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4018/103416/4018_103416_000007_000000.wav|And on the edge of this volcano America played.|4018|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2092/145706/2092_145706_000012_000000.wav|Poor Ferko ate up the scrap of bread they had left him and wept bitterly, but no one heard him or came to his help.|2092|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6415/111615/6415_111615_000021_000000.wav|But it is fun.|6415|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3486/166446/3486_166446_000044_000004.wav|A new child to whom shall be given dominion--nay, to whom has been given dominion? Or is it--taps--for Them?"|3486|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/405/130894/405_130894_000025_000001.wav|I informed the captain of Ned's proposition, which was promptly accepted.|405|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3526/176653/3526_176653_000069_000000.wav|"Thank you," said the fisherman stiffly, and the mountaineer turned silently away.|3526|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2182/181183/2182_181183_000009_000002.wav|And what I write to say is two things.|2182|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5022/29405/5022_29405_000055_000000.wav|"Is that the impression," he asked, "produced by what I allowed you to read?"|5022|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5322/7679/5322_7679_000002_000017.wav|The scout willingly entered into conversation and asked for a cigarette.|5322|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1970/26100/1970_26100_000074_000001.wav|There was Mr. Farnsworth and Mr. Brown and I think Mr. Woods."|1970|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7800/283493/7800_283493_000005_000003.wav|I've so longed to meet up with one when I had my camera with me that I've been picturing how he'd look.|7800|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4640/19188/4640_19188_000018_000000.wav|They emerged thence a moment later.|4640|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1970/28415/1970_28415_000038_000000.wav|"Why," they answered, "that is a picture of Caesar, the emperor of Rome."|1970|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8123/275193/8123_275193_000015_000001.wav|He was seen after he had run a few yards to make a great jump, and then remain in his tracks.|8123|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5393/19218/5393_19218_000085_000000.wav|"To find out where it goes, and what it is.|5393|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6078/54007/6078_54007_000044_000000.wav|"Pooh!" said the Fiddler, "There's nothing there, after all," and he opened the door wide.|6078|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7078/271888/7078_271888_000006_000002.wav|He is a popular painter, and as handsome a man as ever had a picture "on the line."|7078|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4406/16883/4406_16883_000002_000005.wav|It was made of parched wheat, beaten, and fried in bear's grease, but I thought I never tasted pleasanter meat in my life.|4406|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7190/90543/7190_90543_000041_000002.wav|In fact, although nothing had been taken, the damage was considerable.|7190|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8108/274318/8108_274318_000005_000000.wav|Then it was that the rush of the whole dreadful business seemed to turn aside from the dog and direct itself upon his own person.|8108|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8051/119902/8051_119902_000027_000000.wav|Rationing may come yet, but any such system bristles with difficulties.|8051|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5393/19219/5393_19219_000049_000000.wav|There was a tumult, then silence.|5393|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5104/33406/5104_33406_000032_000000.wav|A great shout went up that shook the rafters.|5104|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2136/5143/2136_5143_000027_000002.wav|But it would not do: she saw that I had detected her, and she laughed aloud.|2136|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3982/178459/3982_178459_000057_000001.wav|"Couldn't you--Isn't there--Won't you--" he stammered.|3982|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2836/5355/2836_5355_000060_000000.wav|"Who is he like, Isabel?|2836|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7067/76048/7067_76048_000068_000002.wav|He felt that this time at any rate he was not being deceived by the outward shows of a charming human being.|7067|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8051/118101/8051_118101_000010_000000.wav|William Henry was about 20 years of age, and belonged to Doctor B. Grain, of Baltimore, who hired him out to a farmer.|8051|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8051/119902/8051_119902_000024_000004.wav|But they must have enough wheat to make a durable loaf of bread at the bakeshops, where for generations all the baking has been done.|8051|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8108/280354/8108_280354_000015_000002.wav|When they saw Orpheus they set up a shout of derision. "See," they cried, "the wretched singer who mocks at women and will have no bride but the dead.|8108|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3259/158083/3259_158083_000080_000001.wav|Of the experience Mrs. Lewis wrote:-|3259|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8088/284756/8088_284756_000163_000004.wav|Somehow I seemed to recognize the child as the girl in the pool.|8088|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/78/369/78_369_000023_000003.wav|And do I dare to ask of you to undertake my pilgrimage, to endure the hardships that I have undergone? No; I am not so selfish.|78|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1116/132847/1116_132847_000073_000000.wav|'But where am I to find a young man's clothes?' asked she.|1116|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5022/29405/5022_29405_000074_000000.wav|The deaf man addressed me with a cold and distant manner.|5022|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7078/271888/7078_271888_000063_000001.wav|Please don't alter it," urged the artist; who, advancing to his easel again, continued the free, rapid outline.|7078|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2416/152139/2416_152139_000031_000000.wav|Under the prolonged gaze, Carling's composure, in a measure at least, seemed to forsake him.|2416|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3259/158083/3259_158083_000039_000001.wav|We could see a crowd of them on the porch.|3259|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5393/19218/5393_19218_000037_000005.wav|They stand, sit, lie, with their knees drawn up in a knot, and their legs hanging.|5393|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/446/123502/446_123502_000016_000002.wav|There were few formalities observed in approaching the Martian chieftain.|446|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/250/142286/250_142286_000009_000000.wav|'I never complained of it, I'm sure.'|250|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7078/271888/7078_271888_000081_000003.wav|I have always been thankful that the happy writer of books has no such ordeal to face.|7078|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7402/90848/7402_90848_000058_000000.wav|"Quick!|7402|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7078/271888/7078_271888_000011_000001.wav|Suddenly the scales fell from my eyes.|7078|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3242/8112/3242_8112_000049_000002.wav|What does Mantelish make of it?"|3242|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4362/15663/4362_15663_000008_000006.wav|I seemed to be walking and wallowing in a cloud; but, holding steadily onward, by half-past ten o'clock I had gained the highest summit.|4362|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1963/147036/1963_147036_000003_000000.wav|He could only gaze in stupified silence.|1963|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2289/152258/2289_152258_000043_000002.wav|In modern times the sultans or rulers of Turkey have been commonly regarded as the caliphs.|2289|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2416/152139/2416_152139_000063_000006.wav|He told you to go ahead and act as you saw best.|2416|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7447/91186/7447_91186_000018_000006.wav|His "Gradus ad Parnassum" became the parent of Etude literature.|7447|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4297/13006/4297_13006_000065_000000.wav|And he began the process of thinking about it immediately,--before the door was closed behind her.|4297|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1867/154075/1867_154075_000041_000000.wav|"Meaning that I'm liable to put an end to your stay?"|1867|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4195/186237/4195_186237_000074_000000.wav|"Thank you, Patsy," said Uncle John, meekly, and gathered up his forty-two cents.|4195|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5322/7679/5322_7679_000014_000001.wav|'Put on your cap.|5322|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4680/16041/4680_16041_000017_000002.wav|It was an overturned wagon; his foot recognized pools of water, gullies, and paving-stones scattered and piled up.|4680|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7511/102420/7511_102420_000027_000005.wav|His nose, however, seems to upset the original plan, for it is long and thin and bent slightly to one side.|7511|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3664/11714/3664_11714_000022_000000.wav|The monk glanced round the room as though to assure himself that he was really alone with the dying man; then he advanced with a slow and solemn step towards the bed.|3664|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/83/11691/83_11691_000068_000003.wav|However, we'll soon get him all right."|83|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8108/280354/8108_280354_000007_000012.wav|But if the Fates refuse a husband's prayers, I am resolved never to return hence.|8108|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3857/182317/3857_182317_000019_000001.wav|To use tools involves using reason, instead of sticking to instinct. Now, sticking to instinct has its disadvantages, but so has using reason.|3857|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2836/5355/2836_5355_000059_000000.wav|Sir Francis threw up his arms and stretched himself, as if a fit of idleness had overtaken him; then advanced to the cradle and pulled down the clothes.|2836|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6367/65536/6367_65536_000006_000002.wav|He had come back to it, heartsick of his idols of the marketplace.|6367|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3259/158083/3259_158083_000001_000000.wav|Chapter 11|3259|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6081/41998/6081_41998_000016_000002.wav|This clothing, after a certain time, is sold--for nothing is wasted at the Morgue.|6081|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/196/122159/196_122159_000014_000022.wav|But I knew the truth, and I would live it down--alone, with myself.|196|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3983/5371/3983_5371_000004_000000.wav|They dragged him through a gap in the hedge, a gap that no baby could have got through in a cool moment; but most of us know the difference between coolness and excitement.|3983|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7800/283478/7800_283478_000018_000001.wav|"Besides, we've had enough fun out of the business to stand a little expense like that.|7800|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4297/13009/4297_13009_000022_000001.wav|And his heart was sad within him when he thought that he had vexed her,--loving her as he did with all his heart, but with a heart that was never demonstrative.|4297|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5678/43303/5678_43303_000032_000000.wav|"You must forgive me, Mrs. Brand," he said.|5678|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7505/83618/7505_83618_000003_000003.wav|The two nations were remote in everything but geographical position.|7505|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6064/300880/6064_300880_000052_000004.wav|Or which one of the numerous institutions you maintain in your private city?"|6064|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4018/103416/4018_103416_000039_000002.wav|You're an awful dear, you know."|4018|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5322/7680/5322_7680_000047_000000.wav|'Take it, take it!|5322|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/40/222/40_222_000043_000000.wav|"You feel, as you always do, what is most to the credit of human nature. Such feelings ought to be investigated, that they may know themselves."|40|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/250/142276/250_142276_000000_000000.wav|CHAPTER II|250|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/78/369/78_369_000066_000003.wav|I recollected my threat and resolved that it should be accomplished.|78|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4297/13009/4297_13009_000020_000001.wav|Or, if he does lie in doing so, he does not know that he lies.|4297|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6209/34600/6209_34600_000024_000000.wav|The hour, the strokes of which he had just counted, had been another blow.|6209|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6415/116629/6415_116629_000015_000000.wav|That was an offer worth listening to.|6415|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3259/158083/3259_158083_000035_000001.wav|The following is the statement of Mrs. Nolan, dictated upon her release, in the presence of Mr. Dudley Field Malone:|3259|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1970/26100/1970_26100_000033_000003.wav|He could have come down within fifty feet of the ground and followed that car, pumping bullets into it all the way.|1970|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7505/258964/7505_258964_000034_000005.wav|It is often assumed to be a peculiar thing, sharply in contrast to other changes in value.|7505|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6064/300880/6064_300880_000055_000000.wav|"There's a train at nine o'clock in the morning.|6064|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1867/154075/1867_154075_000010_000000.wav|"An amateur--a rank amateur!|1867|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7402/59171/7402_59171_000010_000007.wav|He is a doctrinaire, and his characters are often comic statements of his doctrines rather than the reflections of men and women.|7402|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5104/33407/5104_33407_000076_000009.wav|This hurt his pride.|5104|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6367/65536/6367_65536_000039_000000.wav|They walked among the firs until the stars came out, and they talked of many things.|6367|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/118/47824/118_47824_000071_000004.wav|His reserve and easy daring mastered them all; and always, as now, he laughed at the futility of their efforts to sound his purposes, to limit his freedom of action.|118|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3857/180923/3857_180923_000007_000002.wav|At the time of his death in 1897, he was a lecturer in the Yale Law School, and member of the Supreme Court of Errors.|3857|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3982/178459/3982_178459_000030_000000.wav|She looked at him, and slowly shook her head.|3982|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8051/119902/8051_119902_000012_000000.wav|Hotels and restaurants are required to make or serve bread containing at least as much of the wheat substitutes as Victory bread.|8051|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2289/152253/2289_152253_000010_000000.wav|With a cry of horror Attila fled from the cave.|2289|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/6529/62554/6529_62554_000076_000001.wav|"No doubt because it was not their interest to do it.|6529|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7178/34644/7178_34644_000106_000007.wav|You believe yourself a player; you are a senator.|7178|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/4195/186238/4195_186238_000017_000000.wav|"Well, he will see me, and right away.|4195|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3486/166446/3486_166446_000099_000003.wav|I shall leave these to guard you and obey you."|3486|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/254/145458/254_145458_000000_000001.wav|All LibriVox recordings are in the public domain.|254|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7059/88364/7059_88364_000008_000004.wav|But even these things make for coincidence.|7059|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/730/360/730_360_000008_000002.wav|I ardently desired to understand them, and bent every faculty towards that purpose, but found it utterly impossible.|730|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/730/360/730_360_000016_000001.wav|Was man, indeed, at once so powerful, so virtuous and magnificent, yet so vicious and base?|730|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5322/7680/5322_7680_000008_000002.wav|After that you have nothing to fear.'|5322|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1963/142776/1963_142776_000000_000000.wav|FISH SOUPS.|1963|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2416/152139/2416_152139_000045_000001.wav|What has a story got to do with this?" snapped Carling.|2416|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/83/9960/83_9960_000013_000001.wav|After a pause, Thenardier continued:--|83|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7059/77897/7059_77897_000039_000001.wav|"Will you join us, Jack?"|7059|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8609/262281/8609_262281_000004_000002.wav|Constance would willingly have commenced the daily routine at an earlier hour.|8609|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8088/284756/8088_284756_000055_000000.wav|"Webbed," nodded Mercer solemnly.|8088|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8419/286667/8419_286667_000009_000001.wav|She did not turn her head towards him, although, having such a long and slender neck, she could have done so with very little trouble.|8419|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/5022/29411/5022_29411_000038_000000.wav|"Did you notice the lady's dress?" I asked.|5022|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/1116/132847/1116_132847_000014_000002.wav|I will give you the knife to guard you against the enchantments of wizards, and the bell to tell me of your perils.|1116|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/8609/262281/8609_262281_000035_000000.wav|Constance kissed her.|8609|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/118/47824/118_47824_000109_000002.wav|I've been weak, Hartley, but not that weak.|118|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2136/5143/2136_5143_000033_000000.wav|'No, on the contrary, sit here by me.|2136|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7511/102420/7511_102420_000009_000003.wav|I suppose the forest makes it so.|7511|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/3982/178459/3982_178459_000038_000001.wav|Your sister-in-law told you, didn't she?"|3982|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/446/123502/446_123502_000025_000000.wav|The fellow whom I had struck lay where he had fallen, nor did any of his mates approach him.|446|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/7059/77897/7059_77897_000028_000001.wav|As I said to Miss Kilburn on our way here, 'if Mrs. Wilmington is opposed to them, we'll drop them.'"|7059|0
+/past_projects/DB/LibriTTS/train-clean-100-22050/2182/181183/2182_181183_000036_000001.wav|Let's ax him what we'd better do.|2182|0
+/past_projects/DB/selvasai/selvasai_organized/avh/wav_22050/avh00268.wav|♡j♡o♡n♡A♡N♡j♡O♡A♡h♡A♡j♡E♡m♡A♡N♡d♡u♡N♡n♡u♡N♡g♡o♡N♡j♡O♡A♡h♡a♡2♡$♡d♡A♡0♡s♡E♡n♡u♡N♡n♡O♡l♡a♡b♡U♡l♡u♡n♡u♡N♡g♡o♡L♡j♡O♡A♡h♡A♡n♡A♡b♡7♡2♡$|avh|1
+/past_projects/DB/selvasai/selvasai_organized/avh/wav_22050/avh00214.wav|♡j♡e♡g♡A♡E♡D♡z♡A♡n♡A♡2♡$♡n♡o♡m♡U♡g♡o♡G♡z♡o♡0♡m♡A♡s♡e♡2♡$|avh|1
+/past_projects/DB/selvasai/selvasai_organized/pma/wav_22050/pma00555.wav|♡g♡E♡d♡a♡d♡O♡h♡A♡j♡E♡A♡n♡A♡D♡w♡o♡N♡x♡O♡l♡E♡t♡o♡j♡E♡n♡u♡N♡d♡e♡;♡j♡o♡0♡m♡A♡L♡s♡E♡M♡j♡A♡0♡E♡t♡o♡j♡o♡b♡o♡l♡E♡n♡u♡N♡j♡U♡l♡A♡l♡A♡c♡o♡2♡$|pma|1
+/past_projects/DB/selvasai/selvasai_organized/avc/wav_22050/avc00020.wav|♡s♡o♡U♡L♡c♡A♡l♡A♡M♡d♡u♡l♡E♡g♡u♡l♡o♡k♡e♡;♡m♡O♡d♡U♡o♡G♡q♡o♡G♡c♡u♡l♡o♡B♡x♡O♡g♡A♡0♡b♡A♡k♡A♡N♡g♡e♡;♡d♡A♡h♡u♡L♡g♡u♡L♡m♡O♡D♡f♡7♡s♡o♡g♡u♡l♡o♡N♡g♡o♡1♡;♡h♡u♡L♡g♡u♡L♡;♡h♡u♡L♡g♡u♡L♡b♡O♡g♡O♡h♡u♡L♡g♡u♡L♡m♡A♡N♡j♡E♡m♡2♡N♡;♡j♡A♡2♡N♡s♡u♡l♡e♡s♡A♡l♡A♡m♡e♡m♡A♡u♡m♡E♡;♡o♡j♡E♡l♡o♡j♡E♡n♡u♡N♡b♡o♡b♡E♡d♡A♡$|avc|1
+/past_projects/DB/selvasai/selvasai_organized/avc/wav_22050/avc00291.wav|♡k♡A♡d♡u♡l♡u♡L♡j♡A♡M♡s♡E♡n♡a♡l♡2♡j♡U♡s♡e♡2♡;♡O♡b♡o♡b♡e♡t♡E♡0♡h♡A♡s♡2♡c♡u♡M♡n♡E♡d♡A♡$|avc|1
+/past_projects/DB/selvasai/selvasai_organized/pfb/wav_22050/pfb00383.wav|♡j♡9♡s♡O♡0♡A♡j♡E♡m♡A♡N♡;♡j♡E♡g♡u♡M♡j♡e♡j♡U♡d♡O♡p♡2♡n♡u♡N♡;♡d♡a♡s♡o♡L♡j♡U♡E♡b♡O♡l♡O♡E♡n♡a♡g♡2♡l♡A♡0♡E♡M♡n♡E♡d♡A♡$|pfb|1
+/past_projects/DB/selvasai/selvasai_organized/pme/wav_22050/pme00299.wav|♡j♡E♡n♡2♡L♡d♡9♡o♡E♡N♡n♡u♡N♡b♡A♡N♡b♡A♡j♡E♡e♡s♡a♡G♡c♡A♡0♡u♡N♡E♡g♡o♡h♡A♡n♡A♡f♡U♡n♡E♡N♡g♡A♡2♡?|pme|1
+/past_projects/DB/selvasai/selvasai_organized/pme/wav_22050/pme00135.wav|♡m♡o♡N♡j♡o♡t♡9♡g♡u♡n♡A♡g♡e♡c♡u♡M♡n♡E♡d♡A♡$♡j♡u♡L♡g♡o♡U♡N♡j♡U♡m♡A♡L♡d♡9♡s♡e♡2♡$|pme|1
+/past_projects/DB/selvasai/selvasai_organized/pff/wav_22050/pff00449.wav|♡A♡p♡A♡t♡u♡A♡M♡n♡O♡l♡E♡t♡o♡e♡s♡o♡j♡A♡M♡x♡A♡N♡h♡A♡N♡n♡U♡n♡u♡L♡p♡A♡n♡u♡N♡s♡A♡E♡e♡s♡A♡l♡A♡j♡o♡c♡o♡2♡$|pff|1
+/past_projects/DB/selvasai/selvasai_organized/pff/wav_22050/pff00271.wav|♡q♡o♡n♡A♡E♡L♡m♡E♡l♡A♡n♡u♡N♡s♡A♡0♡O♡e♡s♡E♡G♡w♡A♡0♡u♡L♡q♡A♡D♡x♡O♡E♡c♡o♡2♡;♡h♡O♡G♡c♡E♡A♡s♡e♡2♡?|pff|1
+/past_projects/DB/selvasai/selvasai_organized/avd/wav_22050/avd00344.wav|♡j♡o♡N♡s♡E♡j♡A♡0♡b♡A♡d♡A♡g♡e♡A♡N♡x♡o♡n♡A♡b♡2♡g♡e♡g♡E♡d♡a♡n♡u♡N♡h♡a♡0♡d♡O♡0♡u♡N♡g♡u♡M♡m♡U♡l♡E♡M♡n♡E♡d♡A♡$|avd|1
+/past_projects/DB/selvasai/selvasai_organized/pfj/wav_22050/pfj00108.wav|♡n♡A♡d♡O♡A♡l♡A♡2♡;♡p♡A♡t♡E♡q♡O♡d♡a♡z♡A♡0♡u♡L♡b♡A♡d♡A♡D♡x♡o♡d♡u♡N♡n♡2♡$|pfj|1
+/past_projects/DB/selvasai/selvasai_organized/ava/wav_22050/ava00149.wav|♡o♡N♡j♡e♡x♡A♡j♡E♡n♡A♡;♡b♡O♡0♡O♡l♡E♡n♡u♡N♡;♡g♡u♡j♡o♡b♡O♡0♡O♡l♡E♡d♡a♡l♡O♡e♡s♡U♡j♡U♡b♡u♡M♡g♡7♡A♡N♡t♡A♡x♡A♡U♡m♡u♡L♡j♡E♡n♡E♡N♡q♡a♡;♡g♡A♡s♡u♡M♡c♡O♡G♡g♡E♡B♡c♡U♡k♡E♡p♡A♡m♡U♡q♡o♡E♡c♡o♡D♡w♡A♡$|ava|1
+/past_projects/DB/selvasai/selvasai_organized/pfa/wav_22050/pfa00226.wav|♡g♡U♡s♡E♡B♡p♡A♡L♡c♡e♡N♡t♡E♡m♡E♡t♡o♡E♡M♡n♡E♡d♡A♡$♡d♡A♡l♡u♡N♡g♡o♡D♡w♡O♡A♡L♡l♡2♡d♡u♡l♡E♡L♡x♡A♡2♡?|pfa|1
+/past_projects/DB/selvasai/selvasai_organized/pfa/wav_22050/pfa00003.wav|♡g♡O♡g♡a♡0♡n♡E♡M♡x♡e♡s♡o♡g♡U♡E♡p♡A♡s♡E♡N♡g♡o♡N♡q♡E♡L♡l♡2♡N♡j♡o♡n♡E♡j♡E♡m♡A♡N♡;♡E♡m♡O♡d♡e♡l♡E♡q♡o♡u♡M♡s♡a♡0♡s♡A♡N♡d♡9♡N♡g♡o♡N♡;♡s♡A♡M♡s♡E♡M♡n♡2♡N♡j♡o♡n♡E♡g♡o♡d♡u♡N♡n♡2♡$|pfa|1
+/past_projects/DB/selvasai/selvasai_organized/pfo/wav_22050/pfo00321.wav|♡b♡A♡N♡g♡A♡B♡c♡u♡M♡n♡E♡d♡o♡g♡E♡d♡A♡l♡E♡g♡O♡E♡c♡o♡D♡c♡u♡M♡n♡E♡d♡o♡$|pfo|1
+/past_projects/DB/selvasai/selvasai_organized/pfo/wav_22050/pfo00551.wav|♡9♡g♡3♡b♡U♡2♡0♡s♡A♡0♡m♡E♡n♡8♡N♡s♡E♡L♡l♡O♡g♡A♡E♡s♡O♡$♡q♡U♡L♡z♡A♡0♡g♡A♡t♡u♡N♡g♡O♡0♡m♡U♡9♡e♡;♡4♡h♡A♡G♡w♡u♡0♡g♡a♡E♡N♡j♡o♡g♡E♡N♡g♡E♡N♡g♡u♡p♡A♡N♡s♡A♡j♡o♡0♡e♡w♡A♡l♡A♡;♡d♡A♡N♡s♡U♡2♡x♡8♡n♡u♡L♡m♡A♡N♡d♡u♡L♡c♡U♡E♡D♡c♡u♡M♡n♡E♡d♡o♡$|pfo|1
+/past_projects/DB/selvasai/selvasai_organized/pfg/wav_22050/pfg00534.wav|♡j♡E♡G♡z♡A♡0♡E♡N♡U♡d♡a♡d♡a♡q♡U♡L♡g♡A♡t♡u♡N♡g♡2♡0♡U♡e♡n♡u♡N♡;♡q♡o♡n♡O♡b♡a♡0♡m♡A♡n♡8♡N♡x♡A♡j♡E♡g♡A♡n♡u♡0♡A♡s♡e♡2♡$|pfg|1
+/past_projects/DB/selvasai/selvasai_organized/pmk/wav_22050/pmk00066.wav|♡A♡l♡A♡3♡;♡g♡A♡0♡n♡A♡M♡g♡3♡h♡9♡m♡A♡N♡n♡A♡3♡?|pmk|1
+/past_projects/DB/selvasai/selvasai_organized/pmk/wav_22050/pmk00585.wav|♡A♡s♡[♡B♡z♡E♡m♡A♡N♡O♡n♡u♡l♡u♡N♡E♡z♡u♡m♡e♡s♡o♡E♡m♡A♡N♡h♡e♡o♡j♡o♡2♡$|pmk|1
+/past_projects/DB/selvasai/selvasai_organized/pfi/wav_22050/pfi00411.wav|♡j♡o♡d♡O♡g♡u♡l♡o♡k♡e♡s♡a♡0♡g♡A♡k♡a♡3♡$♡q♡E♡M♡q♡A♡k♡A♡g♡e♡E♡m♡U♡N♡j♡e♡l♡u♡L♡h♡a♡g♡2♡l♡a♡n♡A♡g♡A♡3♡$|pfi|1
+/past_projects/DB/selvasai/selvasai_organized/pfd/wav_22050/pfd00457.wav|♡d♡A♡u♡M♡w♡A♡L♡b♡U♡t♡o♡g♡E♡q♡O♡s♡a♡0♡7♡L♡b♡O♡j♡A♡0♡s♡U♡g♡u♡B♡z♡A♡h♡6♡t♡a♡g♡u♡L♡b♡A♡D♡x♡e♡d♡9♡s♡2♡c♡o♡2♡$|pfd|1
+/past_projects/DB/selvasai/selvasai_organized/pfd/wav_22050/pfd00137.wav|♡g♡u♡1♡b♡E♡L♡l♡2♡g♡A♡N♡s♡A♡l♡A♡M♡m♡A♡u♡m♡A♡n♡E♡N♡g♡A♡2♡?|pfd|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy10787.wav|♡g♡2♡l♡O♡N♡j♡A♡0♡n♡2♡g♡u♡m♡E♡g♡U♡0♡g♡u♡m♡A♡d♡A♡m♡2♡N♡;♡q♡o♡0♡q♡o♡B♡z♡A♡0♡u♡L♡g♡A♡j♡E♡g♡O♡q♡O♡0♡m♡U♡x♡7♡l♡O♡g♡A♡b♡O♡s♡e♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy06579.wav|♡g♡O♡g♡a♡0♡n♡E♡M♡m♡A♡L♡c♡u♡m♡E♡m♡A♡j♡u♡s♡E♡n♡e♡2♡;♡j♡o♡0♡s♡A♡n♡u♡L♡h♡A♡n♡E♡O♡b♡a♡g♡8♡n♡E♡n♡A♡M♡n♡e♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy06576.wav|♡E♡L♡q♡u♡0♡g♡6♡s♡A♡N♡d♡a♡n♡u♡N♡b♡O♡G♡z♡A♡p♡A♡O♡n♡E♡;♡d♡A♡l♡u♡N♡g♡O♡s♡u♡L♡E♡3♡0♡a♡j♡U♡s♡E♡g♡e♡c♡o♡2♡?|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy10037.wav|♡j♡9♡s♡O♡0♡A♡j♡E♡m♡A♡N♡E♡t♡a♡G♡c♡E♡n♡u♡N♡O♡n♡u♡L♡b♡E♡b♡o♡n♡E♡l♡A♡U♡n♡a♡0♡u♡L♡l♡A♡n♡A♡M♡n♡E♡d♡A♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy00030.wav|♡m♡U♡O♡q♡U♡G♡x♡U♡d♡A♡N♡;♡b♡o♡B♡z♡o♡0♡g♡U♡l♡A♡G♡f♡U♡;♡b♡O♡s♡o♡0♡j♡o♡N♡m♡U♡n♡A♡x♡3♡;♡s♡o♡U♡L♡q♡U♡G♡x♡U♡d♡A♡N♡;♡c♡e♡b♡u♡l♡A♡N♡c♡u♡>♡h♡1♡G♡j♡o♡N♡m♡U♡n♡A♡x♡3♡;♡2♡n♡E♡j♡o♡N♡m♡U♡n♡A♡x♡3♡;♡j♡e♡d♡a♡6♡x♡7♡;♡q♡E♡x♡7♡j♡o♡N♡m♡U♡n♡A♡x♡3♡d♡u♡0♡;♡2♡L♡x♡a♡s♡o♡N♡s♡U♡d♡A♡n♡E♡q♡A♡M♡g♡A♡h♡A♡2♡;♡2♡n♡E♡j♡o♡N♡m♡U♡n♡A♡x♡3♡g♡A♡;♡g♡2♡L♡c♡u♡0♡e♡s♡o♡b♡O♡s♡o♡0♡j♡o♡N♡m♡U♡n♡A♡x♡3♡l♡u♡L♡s♡A♡0♡d♡a♡l♡O♡;♡s♡A♡M♡d♡a♡E♡l♡O♡E♡g♡E♡g♡O♡;♡U♡s♡u♡0♡a♡D♡w♡A♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy06868.wav|♡O♡h♡O♡s♡o♡N♡2♡E♡d♡O♡2♡G♡O♡b♡o♡N♡q♡U♡L♡g♡U♡e♡s♡o♡;♡g♡U♡k♡9♡>♡s♡A♡d♡A♡0♡u♡l♡O♡g♡A♡n♡u♡N♡b♡o♡c♡u♡l♡u♡L♡t♡A♡s♡E♡m♡2♡N♡d♡9♡M♡n♡E♡d♡A♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy09496.wav|♡s♡E♡b♡E♡8♡L♡E♡s♡E♡b♡O♡E♡L♡6♡1♡G♡d♡9♡n♡A♡2♡?|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy12991.wav|♡o♡m♡o♡n♡E♡;♡A♡b♡o♡j♡E♡;♡A♡p♡u♡l♡O♡n♡u♡N♡d♡o♡j♡A♡l♡A♡L♡x♡e♡2♡;♡g♡A♡M♡s♡A♡h♡a♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy07877.wav|♡c♡A♡N♡t♡A♡7♡l♡U♡d♡O♡L♡p♡u♡m♡O♡1♡0♡u♡l♡O♡g♡U♡U♡N♡k♡U♡k♡E♡d♡O♡;♡t♡u♡G♡f♡2♡l♡A♡m♡u♡L♡d♡o♡h♡A♡L♡x♡o♡e♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy09933.wav|♡j♡a♡g♡O♡g♡A♡o♡B♡c♡o♡s♡o♡g♡o♡L♡l♡2♡E♡N♡n♡u♡N♡g♡o♡w♡A♡k♡A♡N♡j♡A♡0♡n♡A♡m♡A♡N♡n♡u♡N♡d♡e♡;♡o♡z♡o♡j♡o♡?|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy05037.wav|♡d♡A♡h♡a♡0♡E♡g♡U♡n♡A♡;♡g♡u♡l♡o♡m♡E♡j♡e♡j♡A♡0♡g♡A♡m♡A♡N♡g♡A♡m♡2♡N♡d♡9♡g♡e♡N♡n♡e♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy09076.wav|♡s♡U♡s♡U♡l♡3♡g♡A♡o♡L♡m♡A♡1♡?♡m♡A♡n♡E♡n♡A♡O♡L♡x♡o♡D♡x♡A♡t♡u♡m♡2♡N♡;♡h♡2♡N♡g♡u♡m♡u♡l♡O♡g♡6♡s♡A♡n♡A♡j♡A♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy04585.wav|♡d♡A♡0♡s♡E♡n♡u♡N♡d♡o♡j♡O♡u♡N♡s♡A♡l♡A♡m♡u♡L♡m♡A♡N♡n♡A♡L♡x♡o♡M♡n♡E♡d♡A♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy07404.wav|♡E♡L♡g♡E♡6♡b♡O♡b♡7♡c♡o♡2♡?♡n♡a♡E♡l♡u♡N♡m♡E♡s♡e♡m♡o♡N♡j♡E♡d♡O♡o♡B♡x♡O♡;♡n♡A♡L♡c♡E♡g♡A♡m♡A♡G♡w♡a♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy07435.wav|♡t♡E♡k♡e♡s♡u♡L♡O♡p♡u♡n♡A♡j♡A♡m♡A♡j♡A♡;♡E♡L♡b♡U♡n♡A♡n♡e♡m♡a♡j♡E♡N♡d♡]♡D♡w♡a♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy02379.wav|♡E♡t♡u♡L♡s♡O♡3♡d♡9♡M♡n♡E♡d♡A♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy06297.wav|♡s♡o♡N♡t♡a♡k♡A♡s♡E♡n♡u♡M♡n♡3♡h♡A♡D♡q♡O♡k♡O♡m♡A♡j♡u♡s♡E♡j♡o♡?|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy11331.wav|♡t♡a♡G♡f♡a♡n♡u♡N♡j♡E♡b♡A♡p♡e♡n♡7♡d♡u♡l♡E♡m♡2♡N♡d♡9♡L♡x♡A♡2♡?|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy04329.wav|♡j♡E♡N♡z♡A♡j♡A♡L♡s♡a♡0♡g♡E♡s♡2♡N♡n♡e♡2♡$♡s♡O♡m♡U♡N♡d♡a♡l♡O♡e♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy10597.wav|♡g♡6♡l♡A♡N♡h♡U♡l♡A♡E♡h♡a♡j♡U♡s♡e♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy12988.wav|♡b♡U♡m♡O♡n♡E♡m♡e♡h♡9♡g♡A♡b♡2♡n♡u♡L♡q♡U♡k♡A♡h♡A♡N♡d♡A♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy11361.wav|♡m♡O♡G♡x♡o♡l♡E♡j♡A♡n♡A♡;♡n♡o♡m♡U♡6♡f♡u♡d♡A♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy10057.wav|♡k♡O♡L♡t♡a♡G♡c♡E♡n♡u♡N♡g♡E♡b♡O♡N♡n♡3♡g♡u♡m♡e♡k♡O♡L♡b♡E♡q♡o♡n♡8♡n♡E♡q♡U♡g♡A♡d♡9♡j♡A♡n♡A♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy12031.wav|♡l♡E♡B♡c♡u♡t♡E♡G♡k♡o♡L♡l♡o♡g♡A♡s♡O♡N♡n♡E♡m♡e♡g♡e♡j♡A♡l♡o♡U♡L♡l♡E♡n♡e♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy12595.wav|♡O♡n♡u♡L♡n♡A♡7♡j♡8♡s♡o♡g♡O♡m♡A♡8♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy12374.wav|♡b♡O♡E♡L♡l♡o♡s♡E♡l♡e♡s♡o♡g♡o♡m♡u♡N♡n♡2♡N♡g♡E♡g♡A♡O♡L♡l♡A♡7♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy09904.wav|♡c♡3♡p♡E♡0♡m♡O♡L♡g♡O♡g♡a♡G♡c♡e♡N♡t♡o♡e♡s♡o♡;♡s♡E♡M♡m♡A♡n♡8♡n♡E♡s♡A♡0♡g♡U♡E♡B♡c♡E♡;♡s♡A♡0♡p♡U♡M♡x♡8♡N♡E♡L♡m♡A♡n♡8♡n♡u♡L♡j♡E♡g♡u♡p♡A♡n♡u♡n♡a♡0♡s♡A♡n♡u♡N♡h♡A♡g♡O♡E♡c♡o♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy07753.wav|♡q♡E♡N♡g♡U♡l♡A♡0♡c♡A♡8♡D♡w♡A♡m♡2♡;♡A♡j♡E♡G♡h♡7♡h♡a♡A♡n♡a♡N♡n♡E♡?|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy05058.wav|♡s♡E♡g♡A♡N♡d♡9♡m♡2♡N♡g♡u♡N♡q♡o♡x♡A♡p♡e♡e♡s♡o♡q♡A♡h♡A♡N♡j♡A♡n♡o♡w♡a♡2♡?|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy11474.wav|♡O♡n♡u♡L♡q♡o♡u♡m♡A♡l♡A♡c♡o♡;♡o♡N♡j♡e♡b♡U♡t♡o♡d♡A♡n♡E♡N♡g♡o♡N♡d♡e♡?|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy09703.wav|♡j♡9♡s♡O♡0♡A♡M♡n♡E♡d♡A♡;♡k♡o♡p♡E♡j♡A♡p♡A♡N♡g♡E♡g♡A♡g♡O♡j♡A♡0♡E♡n♡A♡s♡o♡;♡k♡o♡p♡E♡n♡u♡N♡j♡e♡g♡O♡0♡E♡A♡N♡d♡]♡2♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/Main/wav_22050/lmy00562.wav|♡s♡O♡s♡U♡q♡o♡N♡j♡a♡e♡d♡U♡n♡9♡n♡O♡d♡O♡0♡e♡s♡A♡N♡m♡U♡l♡E♡n♡A♡;♡w♡O♡n♡u♡N♡g♡u♡G♡c♡O♡s♡U♡q♡u♡0♡e♡j♡E♡z♡o♡0♡n♡4♡h♡E♡e♡E♡L♡z♡O♡0♡E♡l♡A♡g♡E♡b♡O♡d♡A♡n♡u♡N♡;♡O♡h♡E♡l♡2♡;♡m♡E♡N♡j♡O♡g♡e♡3♡G♡x♡U♡;♡n♡a♡j♡E♡n♡u♡N♡s♡O♡m♡A♡0♡e♡j♡A♡2♡N♡j♡o♡G♡b♡A♡L♡l♡O♡l♡O♡c♡o♡j♡O♡N♡j♡a♡h♡A♡2♡7♡c♡u♡M♡n♡E♡d♡A♡$|Main|1
+/past_projects/DB/selvasai/selvasai_organized/pfh/wav_22050/pfh00320.wav|♡d♡A♡l♡u♡N♡b♡O♡G♡z♡E♡h♡6♡t♡a♡g♡u♡n♡o♡M♡n♡A♡2♡?|pfh|1
+/past_projects/DB/selvasai/selvasai_organized/pfh/wav_22050/pfh00030.wav|♡E♡L♡l♡E♡A♡c♡u♡l♡A♡n♡u♡N♡q♡a♡g♡u♡L♡q♡A♡D♡x♡O♡E♡c♡o♡2♡;♡o♡n♡u♡z♡O♡g♡e♡E♡N♡n♡A♡2♡?|pfh|1
+/past_projects/DB/selvasai/selvasai_organized/avg/wav_22050/avg00330.wav|♡j♡o♡l♡o♡N♡$♡j♡o♡0♡m♡A♡L♡m♡A♡u♡m♡E♡s♡O♡G♡c♡A♡0♡A♡s♡E♡g♡e♡c♡o♡2♡$|avg|1
+/past_projects/DB/selvasai/selvasai_organized/pfe/wav_22050/pfe00043.wav|♡j♡A♡g♡A♡2♡N♡g♡O♡l♡u♡N♡;♡j♡A♡2♡N♡s♡u♡l♡o♡B♡x♡O♡b♡U♡j♡A♡g♡3♡0♡E♡h♡8♡L♡c♡E♡N♡d♡o♡l♡A♡m♡2♡;♡k♡O♡s♡o♡0♡2♡0♡u♡l♡A♡L♡w♡a♡g♡A♡j♡A♡0♡j♡O♡u♡N♡j♡a♡l♡3♡E♡M♡n♡E♡d♡A♡$|pfe|1
+/past_projects/DB/selvasai/selvasai_organized/pfp/wav_22050/pfp00024.wav|♡g♡U♡g♡u♡B♡q♡A♡n♡A♡g♡a♡0♡q♡A♡L♡q♡A♡g♡o♡t♡u♡N♡;♡g♡E♡N♡g♡u♡B♡j♡A♡d♡O♡0♡q♡A♡g♡A♡j♡o♡B♡x♡u♡n♡o♡n♡u♡N♡g♡2♡0♡U♡;♡d♡O♡l♡O♡e♡U♡q♡u♡G♡g♡A♡j♡A♡0♡j♡A♡l♡E♡l♡O♡E♡d♡O♡0♡a♡g♡A♡x♡O♡;♡j♡E♡L♡l♡O♡l♡u♡L♡1♡0♡b♡O♡h♡o♡d♡O♡l♡O♡k♡o♡N♡g♡E♡j♡O♡n♡e♡g♡4♡j♡o♡0♡E♡;♡j♡U♡h♡a♡0♡q♡A♡s♡o♡n♡e♡j♡7♡q♡u♡g♡E♡n♡A♡U♡q♡u♡G♡q♡A♡s♡o♡n♡e♡s♡A♡0♡7♡0♡e♡m♡A♡D♡x♡e♡E♡d♡O♡0♡a♡g♡A♡M♡s♡o♡;♡1♡0♡b♡O♡h♡o♡s♡E♡m♡2♡N♡d♡9♡M♡n♡E♡d♡A♡$|pfp|1
+/past_projects/DB/selvasai/selvasai_organized/pfp/wav_22050/pfp00500.wav|♡q♡A♡M♡m♡A♡L♡l♡O♡g♡o♡G♡z♡o♡0♡d♡9♡s♡E♡g♡o♡N♡n♡e♡2♡$♡j♡E♡g♡A♡h♡o♡L♡l♡E♡l♡E♡E♡c♡u♡x♡e♡l♡A♡?|pfp|1
+/past_projects/DB/selvasai/selvasai_organized/avf/wav_22050/avf00262.wav|♡j♡o♡n♡A♡M♡j♡A♡q♡E♡N♡g♡U♡l♡A♡0♡h♡e♡o♡j♡o♡c♡o♡2♡$♡n♡o♡m♡U♡s♡u♡L♡p♡o♡2♡$|avf|1
+/past_projects/DB/selvasai/selvasai_organized/pmd/wav_22050/pmd00650.wav|♡j♡E♡M♡d♡O♡m♡A♡N♡k♡O♡h♡E♡M♡d♡u♡l♡o♡s♡o♡;♡t♡a♡G♡c♡E♡t♡A♡g♡O♡g♡A♡l♡2♡g♡U♡2♡$|pmd|1
+/past_projects/DB/selvasai/selvasai_organized/pmd/wav_22050/pmd00551.wav|♡p♡u♡L♡l♡e♡E♡t♡E♡0♡u♡N♡A♡j♡U♡j♡A♡L♡d♡]♡c♡o♡2♡$|pmd|1
+/past_projects/DB/selvasai/selvasai_organized/pmf/wav_22050/pmf00081.wav|♡p♡o♡N♡d♡u♡7♡j♡o♡G♡x♡u♡M♡j♡U♡0♡o♡n♡u♡g♡o♡s♡u♡l♡O♡h♡A♡s♡E♡g♡e♡c♡o♡2♡?|pmf|1
+/past_projects/DB/selvasai/selvasai_organized/pmf/wav_22050/pmf00157.wav|♡g♡A♡u♡l♡E♡l♡A♡g♡u♡l♡o♡N♡j♡E♡E♡M♡m♡A♡s♡E♡j♡O♡A♡$|pmf|1
+/past_projects/DB/selvasai/selvasai_organized/pmb/wav_22050/pmb00033.wav|♡s♡O♡N♡n♡E♡M♡g♡6♡s♡A♡N♡d♡9♡s♡2♡c♡u♡M♡n♡E♡d♡A♡;♡2♡0♡s♡U♡j♡u♡0♡d♡u♡l♡E♡L♡x♡A♡2♡?|pmb|1
+/past_projects/DB/selvasai/selvasai_organized/pmb/wav_22050/pmb00162.wav|♡k♡E♡j♡u♡m♡e♡n♡4♡g♡A♡d♡U♡g♡A♡j♡E♡E♡N♡n♡u♡N♡d♡e♡;♡o♡w♡o♡N♡g♡o♡l♡O♡h♡A♡s♡E♡g♡e♡c♡o♡2♡?|pmb|1
+/past_projects/DB/selvasai/selvasai_organized/ave/wav_22050/ave00285.wav|♡j♡o♡l♡o♡N♡$♡j♡E♡N♡z♡A♡g♡O♡m♡E♡N♡d♡9♡s♡E♡g♡e♡c♡o♡2♡$♡d♡O♡U♡m♡u♡L♡m♡O♡D♡w♡u♡l♡2♡s♡o♡j♡9♡s♡O♡0♡a♡2♡$|ave|1
+/past_projects/DB/selvasai/selvasai_organized/pfc/wav_22050/pfc00205.wav|♡s♡O♡0♡6♡g♡3♡g♡A♡t♡u♡N♡s♡u♡t♡A♡E♡l♡o♡w♡o♡s♡e♡2♡?|pfc|1
+/past_projects/DB/selvasai/selvasai_organized/pfc/wav_22050/pfc00208.wav|♡j♡E♡B♡x♡A♡B♡c♡E♡j♡E♡N♡z♡A♡b♡E♡c♡A♡2♡;♡g♡u♡l♡o♡q♡o♡?|pfc|1
+/past_projects/DB/selvasai/selvasai_organized/pmj/wav_22050/pmj00345.wav|♡g♡E♡q♡E♡m♡A♡j♡E♡m♡O♡t♡A♡n♡u♡N♡s♡A♡0♡7♡0♡E♡m♡2♡N♡b♡O♡G♡f♡U♡m♡E♡l♡o♡n♡a♡g♡E♡l♡u♡L♡s♡E♡h♡a♡0♡a♡1♡h♡A♡M♡n♡E♡d♡A♡$|pmj|1
+/past_projects/DB/selvasai/selvasai_organized/pfm/wav_22050/pfm00049.wav|♡o♡M♡m♡A♡U♡L♡j♡E♡m♡A♡l♡A♡2♡$♡h♡A♡L♡m♡o♡n♡E♡d♡O♡o♡M♡m♡A♡g♡A♡h♡U♡l♡U♡L♡t♡o♡L♡g♡O♡E♡l♡o♡n♡A♡g♡E♡L♡b♡A♡l♡A♡s♡E♡L♡x♡o♡1♡$|pfm|1
+/past_projects/DB/selvasai/selvasai_organized/pfm/wav_22050/pfm00340.wav|♡m♡2♡N♡j♡o♡B♡g♡2♡L♡g♡7♡n♡u♡N♡o♡N♡j♡e♡n♡A♡O♡N♡d♡e♡?|pfm|1
+/past_projects/DB/selvasai/selvasai_organized/pmi/wav_22050/pmi00115.wav|♡x♡a♡8♡N♡n♡u♡N♡d♡e♡g♡6♡s♡O♡G♡j♡A♡N♡g♡o♡A♡n♡E♡2♡c♡o♡?|pmi|1
+/past_projects/DB/selvasai/selvasai_organized/pmc/wav_22050/pmc00131.wav|♡j♡E♡h♡A♡q♡o♡L♡l♡2♡g♡E♡E♡l♡o♡N♡g♡O♡s♡e♡s♡U♡m♡o♡E♡c♡o♡D♡w♡A♡n♡E♡;♡s♡E♡N♡g♡E♡h♡A♡n♡e♡2♡$|pmc|1
+/past_projects/DB/selvasai/selvasai_organized/pmc/wav_22050/pmc00652.wav|♡g♡U♡0♡n♡a♡s♡o♡n♡E♡g♡O♡;♡O♡p♡u♡l♡A♡E♡n♡u♡l♡O♡g♡U♡m♡a♡h♡a♡c♡o♡2♡$|pmc|1
+/past_projects/DB/selvasai/selvasai_organized/pfn/wav_22050/pfn00035.wav|♡b♡E♡c♡A♡d♡O♡d♡u♡s♡2♡1♡j♡o♡$♡h♡O♡0♡s♡A♡m♡E♡m♡2♡n♡2♡0♡n♡2♡G♡g♡A♡0♡7♡e♡j♡O♡t♡e♡2♡$|pfn|1
+/past_projects/DB/selvasai/selvasai_organized/pfn/wav_22050/pfn00463.wav|♡d♡a♡p♡3♡N♡n♡E♡M♡;♡1♡G♡c♡O♡G♡c♡E♡g♡A♡n♡E♡d♡9♡o♡c♡u♡M♡n♡E♡d♡A♡$|pfn|1
+/past_projects/DB/selvasai/selvasai_organized/pfk/wav_22050/pfk00294.wav|♡U♡s♡o♡N♡s♡A♡M♡g♡A♡G♡w♡a♡b♡U♡t♡o♡s♡o♡L♡q♡E♡h♡A♡L♡z♡A♡0♡s♡O♡l♡u♡L♡q♡A♡j♡A♡b♡O♡j♡A♡$|pfk|1
+/past_projects/DB/selvasai/selvasai_organized/adb/wav_22050/adb00157.wav|♡p♡2♡0♡z♡o♡m♡E♡n♡O♡p♡u♡N♡2♡0♡h♡7♡n♡u♡N♡;♡o♡w♡o♡N♡g♡o♡D♡w♡u♡l♡E♡E♡N♡n♡A♡2♡?|adb|1
+/past_projects/DB/selvasai/selvasai_organized/pfl/wav_22050/pfl00108.wav|♡E♡b♡o♡n♡e♡j♡A♡d♡O♡0♡q♡A♡l♡u♡L♡s♡A♡n♡u♡N♡d♡e♡;♡g♡A♡j♡A♡0♡g♡O♡m♡E♡N♡d♡9♡n♡u♡N♡O♡B♡c♡2♡n♡E♡c♡o♡N♡n♡U♡p♡u♡1♡$|pfl|1
+/past_projects/DB/selvasai/selvasai_organized/pfl/wav_22050/pfl00571.wav|♡s♡A♡0♡A♡M♡d♡O♡0♡e♡M♡b♡E♡c♡E♡l♡O♡q♡U♡L♡b♡A♡l♡A♡g♡e♡c♡u♡M♡n♡E♡d♡A♡$|pfl|1
+/past_projects/DB/selvasai/selvasai_organized/avb/wav_22050/avb00088.wav|♡p♡u♡l♡A♡0♡c♡u♡e♡p♡a♡j♡o♡n♡u♡N♡;♡c♡A♡l♡u♡t♡u♡l♡u♡g♡a♡E♡n♡e♡q♡o♡l♡A♡G♡x♡7♡;♡p♡u♡l♡A♡N♡q♡u♡k♡A♡p♡u♡k♡A♡e♡j♡A♡G♡p♡U♡m♡e♡d♡O♡;♡2♡0♡h♡1♡0♡u♡L♡j♡U♡o♡D♡w♡A♡$|avb|1
