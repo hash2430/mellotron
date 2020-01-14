@@ -24,16 +24,16 @@ def create_hparams(hparams_string=None, verbose=False):
         ################################
         # Data Parameters             #
         ################################
-        training_files='filelists/merge_korean_pron_train.txt',
-        validation_files='filelists/merge_korean_pron_valid.txt',
-        text_cleaners=['korean_cleaners'],
+        training_files='/past_projects/DB/selvasai/selvasai_organized/train_file_list.txt',
+        validation_files='/past_projects/DB/selvasai/selvasai_organized/valid_file_list.txt',
+        text_cleaners=['english_cleaners'],
         p_arpabet=1.0,
         cmudict_path="data/cmu_dictionary",
 
         ################################
         # Audio Parameters             #
         ################################
-        max_wav_value=1.0,
+        max_wav_value=32768.0,
         sampling_rate=22050,
         filter_length=1024,
         hop_length=256,
@@ -85,7 +85,7 @@ def create_hparams(hparams_string=None, verbose=False):
         postnet_n_convolutions=5,
 
         # Speaker embedding
-        n_speakers=161,
+        n_speakers=145,
         speaker_embedding_dim=128,
 
         # Reference encoder
@@ -104,13 +104,13 @@ def create_hparams(hparams_string=None, verbose=False):
         ################################
         # Optimization Hyperparameters #
         ################################
-        use_saved_learning_rate=True,
+        use_saved_learning_rate=False,
         learning_rate=1e-3,
         learning_rate_min=1e-5,
         learning_rate_anneal=50000,
         weight_decay=1e-6,
         grad_clip_thresh=1.0,
-        batch_size=8,
+        batch_size=32,
         mask_padding=True,  # set model's padded outputs to padded values
 
     )

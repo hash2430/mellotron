@@ -48,7 +48,7 @@ class TextMelLoader(torch.utils.data.Dataset):
 
     def create_speaker_lookup_table(self, audiopaths_and_text):
         speaker_ids = np.sort(np.unique([x[2] for x in audiopaths_and_text]))
-        d = {int(speaker_ids[i]): i for i in range(len(speaker_ids))}
+        d = {speaker_ids[i]: i for i in range(len(speaker_ids))}
         return d
 
     def get_f0(self, audio, sampling_rate=22050, frame_length=1024,
@@ -63,21 +63,23 @@ class TextMelLoader(torch.utils.data.Dataset):
         return f0
 
     def get_data(self, audiopath_and_text):
-        audiopath, text, speaker = audiopath_and_text
-        text = self.get_text(text)
+        audiopath, text, speaker, lang_code = audiopath_and_text
+        lang_code = int(lang_code)
+        text = self.get_text(text, lang_code)
         mel, f0 = self.get_mel_and_f0(audiopath)
         speaker_id = self.get_speaker_id(speaker)
         return (text, mel, speaker_id, f0)
 
     def get_speaker_id(self, speaker_id):
-        return torch.IntTensor([self.speaker_ids[int(speaker_id)]])
+        return torch.IntTensor([self.speaker_ids[speaker_id]])
 
     def get_mel_and_f0(self, filepath):
         audio, sampling_rate = load_wav_to_torch(filepath)
         if sampling_rate != self.stft.sampling_rate:
             raise ValueError("{} SR doesn't match target {} SR".format(
                 sampling_rate, self.stft.sampling_rate))
-        audio_norm = audio / self.max_wav_value
+        audio_norm = audio / self.max_wav_value # max_wav_value must be set to 1 when wav is float32 format already
+        # I changed them to float32 during preprocessing so this normalization is unnecessary.
         audio_norm = audio_norm.unsqueeze(0)
         melspec = self.stft.mel_spectrogram(audio_norm)
         melspec = torch.squeeze(melspec, 0)
@@ -90,9 +92,9 @@ class TextMelLoader(torch.utils.data.Dataset):
 
         return melspec, f0
 
-    def get_text(self, text):
+    def get_text(self, text, lang_code):
         text_norm = torch.IntTensor(
-            text_to_sequence(text, self.text_cleaners, self.cmudict))
+            text_to_sequence(text, self.text_cleaners, lang_code, self.cmudict))
         return text_norm
 
     def __getitem__(self, index):

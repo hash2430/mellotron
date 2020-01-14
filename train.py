@@ -14,7 +14,7 @@ from model import Tacotron2
 from data_utils import TextMelLoader, TextMelCollate
 from loss_function import Tacotron2Loss
 from logger import Tacotron2Logger
-from hparams import create_hparams
+from configs.merged_korean_hparams import create_hparams
 
 
 def reduce_tensor(tensor, n_gpus):

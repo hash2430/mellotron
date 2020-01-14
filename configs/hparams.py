@@ -24,9 +24,9 @@ def create_hparams(hparams_string=None, verbose=False):
         ################################
         # Data Parameters             #
         ################################
-        training_files='filelists/merge_korean_pron_train.txt',
-        validation_files='filelists/merge_korean_pron_valid.txt',
-        text_cleaners=['korean_cleaners'],
+        training_files='filelists/libritts_train_clean_100_audiopath_text_sid_shorterthan10s_atleast5min_train_filelist.txt',
+        validation_files='filelists/libritts_train_clean_100_audiopath_text_sid_atleast5min_val_filelist.txt',
+        text_cleaners=['english_cleaners'],
         p_arpabet=1.0,
         cmudict_path="data/cmu_dictionary",
 
@@ -85,7 +85,7 @@ def create_hparams(hparams_string=None, verbose=False):
         postnet_n_convolutions=5,
 
         # Speaker embedding
-        n_speakers=161,
+        n_speakers=123,
         speaker_embedding_dim=128,
 
         # Reference encoder

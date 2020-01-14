@@ -1,5 +1,3 @@
-
-import matplotlib
 import matplotlib.pyplot as plt
 import IPython.display as ipd
 
@@ -8,13 +6,12 @@ sys.path.append('waveglow/')
 
 from itertools import cycle
 import numpy as np
-import scipy as sp
 from scipy.io.wavfile import write
 import pandas as pd
 import librosa
 import torch
 
-from hparams import create_hparams
+from configs.hparams import create_hparams
 from train import load_model
 from waveglow.denoiser import Denoiser
 from layers import TacotronSTFT
@@ -70,10 +67,10 @@ audio_paths = 'data/examples_filelist.txt'
 dataloader = TextMelLoader(audio_paths, hparams)
 datacollate = TextMelCollate(1)
 file_idx = 0
-audio_path, text, sid = dataloader.audiopaths_and_text[file_idx]
+audio_path, text, sid, lang_code = dataloader.audiopaths_and_text[file_idx]
 
 # get audio path, encoded text, pitch contour and mel for gst
-text_encoded = torch.LongTensor(text_to_sequence(text, hparams.text_cleaners, arpabet_dict))[None, :].cuda()
+text_encoded = torch.LongTensor(text_to_sequence(text, hparams.text_cleaners, int(lang_code), arpabet_dict))[None, :].cuda()
 pitch_contour = dataloader[file_idx][3][None].cuda()
 mel = load_mel(audio_path)
 print(audio_path, text)
@@ -93,8 +90,8 @@ with torch.no_grad():
     # get rhythm (alignment map) using tacotron 2
     mel_outputs, mel_outputs_postnet, gate_outputs, rhythm = mellotron.forward(x)
     rhythm = rhythm.permute(1, 0, 2)
-speaker_id = next(female_speakers) if np.random.randint(2) else next(male_speakers)
-speaker_id = torch.LongTensor([speaker_id]).cuda()
+# speaker_id = next(female_speakers) if np.random.randint(2) else next(male_speakers)
+speaker_id = torch.LongTensor([0]).cuda()
 
 with torch.no_grad():
     mel_outputs, mel_outputs_postnet, gate_outputs, _ = mellotron.inference_noattention(
@@ -106,7 +103,9 @@ plot_mel_f0_alignment(x[2].data.cpu().numpy()[0],
                       rhythm.data.cpu().numpy()[:, 0].T)
 with torch.no_grad():
     audio = denoiser(waveglow.infer(mel_outputs_postnet, sigma=0.8), 0.01)[:, 0]
-ipd.Audio(audio[0].data.cpu().numpy(), rate=hparams.sampling_rate)
+    audio = audio.squeeze(0).cpu().numpy()
+    write("{}.wav".format('out_sample'), hparams.sampling_rate, audio)
+# ipd.Audio(audio[0].data.cpu().numpy(), rate=hparams.sampling_rate)
 
 data = get_data_from_musicxml('data/haendel_hallelujah.musicxml', 132, convert_stress=True)
 panning = {'Soprano': [-60, -30], 'Alto': [-40, -10], 'Tenor': [30, 60], 'Bass': [10, 40]}
@@ -122,9 +121,9 @@ for i, (part, v) in enumerate(data.items()):
     for k in range(n_speakers_per_part):
         pan = np.random.randint(panning[part][0], panning[part][1])
         if any(x in part.lower() for x in ('soprano', 'alto', 'female')):
-            speaker_id = torch.LongTensor([next(female_speakers)]).cuda()
+            speaker_id = torch.LongTensor([1]).cuda()
         else:
-            speaker_id = torch.LongTensor([next(male_speakers)]).cuda()
+            speaker_id = torch.LongTensor([3]).cuda()
         print("{} MellotronID {} pan {}".format(part, speaker_id.item(), pan))
 
         with torch.no_grad():
