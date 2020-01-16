@@ -14,7 +14,7 @@ from model import Tacotron2
 from data_utils import TextMelLoader, TextMelCollate
 from loss_function import Tacotron2Loss
 from logger import Tacotron2Logger
-from configs.merged_korean_hparams import create_hparams
+from configs.korean_200113 import create_hparams
 
 
 def reduce_tensor(tensor, n_gpus):
@@ -39,9 +39,9 @@ def init_distributed(hparams, n_gpus, rank, group_name):
     print("Done initializing distributed")
 
 
-def prepare_dataloaders(hparams):
+def prepare_dataloaders(hparams, output_directory):
     # Get data, data loaders and collate function ready
-    trainset = TextMelLoader(hparams.training_files, hparams)
+    trainset = TextMelLoader(hparams.training_files, hparams, output_directory=output_directory)
     valset = TextMelLoader(hparams.validation_files, hparams,
                            speaker_ids=trainset.speaker_ids)
     collate_fn = TextMelCollate(hparams.n_frames_per_step)
@@ -184,7 +184,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
     logger = prepare_directories_and_logger(
         output_directory, log_directory, rank)
 
-    train_loader, valset, collate_fn, train_sampler = prepare_dataloaders(hparams)
+    train_loader, valset, collate_fn, train_sampler = prepare_dataloaders(hparams, output_directory)
 
     # Load checkpoint if one exists
     iteration = 0
