@@ -17,7 +17,7 @@ def check_paths(lists, num_workers=16, tqdm=lambda x: x):
             files2d[i] = f.readlines()
     executor = ProcessPoolExecutor(max_workers=num_workers)
 
-    for i in range(1,len(files2d)):
+    for i in range(len(files2d)):
         for line in files2d[i]:
             path = line.split('|')[0]
             futures[i].append(executor.submit(partial(_process_utterance, path)))
