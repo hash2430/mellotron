@@ -56,7 +56,7 @@ hparams = create_hparams()
 stft = TacotronSTFT(hparams.filter_length, hparams.hop_length, hparams.win_length,
                     hparams.n_mel_channels, hparams.sampling_rate, hparams.mel_fmin,
                     hparams.mel_fmax)
-checkpoint_path = '/past_projects/DB/mellotron/checkpoints/korean_200113/checkpoint_21000'
+checkpoint_path = '/past_projects/mellotron/checkpoints/korean_200113/checkpoint_176000'
     # "models/mellotron_libritts.pt"
 mellotron = load_model(hparams).cuda().eval()
 mellotron.load_state_dict(torch.load(checkpoint_path)['state_dict'])

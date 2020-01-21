@@ -65,3 +65,10 @@ python preprocess.py --dataset=integrate_dataset
 * So I recommend users to run this step to speed up the learning process.
 * src: wav_22050/*.wav
 * dst: mel/\*.pt and f0/\*.pt
+
+## TODO
+* Undo step 5
+    * Generating mel and f0 in preprocessing time did not increase learning speed.
+    * It seems the file/io and mel/f0 calculating speed is about the same.
+    * There is no point preprocessing them. It only takes up disk memory.
+    * It also took 1 day to generate them
