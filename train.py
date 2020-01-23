@@ -53,7 +53,7 @@ def prepare_dataloaders(hparams, output_directory):
         train_sampler = None
         shuffle = True
 
-    train_loader = DataLoader(trainset, num_workers=1, shuffle=shuffle,
+    train_loader = DataLoader(trainset, num_workers=16, shuffle=shuffle,
                               sampler=train_sampler,
                               batch_size=hparams.batch_size, pin_memory=False,
                               drop_last=True, collate_fn=collate_fn)
@@ -210,7 +210,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
             train_sampler.set_epoch(epoch)
         for i, batch in enumerate(train_loader):
             start = time.perf_counter()
-            if iteration > 0 and iteration % hparams.learning_rate_anneal == 0:
+            if iteration > 0 and iteration < 250000 and iteration % hparams.learning_rate_anneal == 0:
                 learning_rate = max(
                     hparams.learning_rate_min, learning_rate * 0.5)
                 for param_group in optimizer.param_groups:
