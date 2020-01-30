@@ -417,22 +417,22 @@ class Decoder(nn.Module):
         alignments: sequence of attention weights from the decoder
         """
 
-        decoder_input = self.get_go_frame(memory).unsqueeze(0)
-        decoder_inputs = self.parse_decoder_inputs(decoder_inputs)
+        decoder_input = self.get_go_frame(memory).unsqueeze(0) # initialize with zero frame
+        decoder_inputs = self.parse_decoder_inputs(decoder_inputs) # reflect n_frames_per_step
         decoder_inputs = torch.cat((decoder_input, decoder_inputs), dim=0)
-        decoder_inputs = self.prenet(decoder_inputs)
+        decoder_inputs = self.prenet(decoder_inputs) #mel dim to hparams.prenet_dim
 
         # audio features
         f0_dummy = self.get_end_f0(f0s)
         f0s = torch.cat((f0s, f0_dummy), dim=2)
         f0s = F.relu(self.prenet_f0(f0s))
-        f0s = f0s.permute(2, 0, 1)
+        f0s = f0s.permute(2, 0, 1) #(T,B,C)
 
-        self.initialize_decoder_states(
+        self.initialize_decoder_states( # initialize decoder member variables for dymanic tensor
             memory, mask=~get_mask_from_lengths(memory_lengths))
 
         mel_outputs, gate_outputs, alignments = [], [], []
-        while len(mel_outputs) < decoder_inputs.size(0) - 1:
+        while len(mel_outputs) < decoder_inputs.size(0) - 1: # Decoder.forward() continues until g.t. mel length.
             if len(mel_outputs) == 0 or np.random.uniform(0.0, 1.0) <= self.p_teacher_forcing:
                 decoder_input = torch.cat((decoder_inputs[len(mel_outputs)],
                                            f0s[len(mel_outputs)]), dim=1)
@@ -647,14 +647,14 @@ class Tacotron2(nn.Module):
         embedded_speakers = self.speaker_embedding(speaker_ids)[:, None]
         if hasattr(self, 'gst'):
             if isinstance(style_input, int):
-                query = torch.zeros(1, 1, self.gst.encoder.ref_enc_gru_size).cuda()
+                query = torch.zeros(1, 1, self.gst.encoder.ref_enc_gru_size).cuda() # reference embedding as zero vector. why this implementation?
                 GST = torch.tanh(self.gst.stl.embed)
                 key = GST[style_input].unsqueeze(0).expand(1, -1, -1)
                 embedded_gst = self.gst.stl.attention(query, key)
             else:
                 embedded_gst = self.gst(style_input)
 
-        embedded_speakers = embedded_speakers.repeat(1, embedded_text.size(1), 1)
+        embedded_speakers = embedded_speakers.repeat(embedded_text.size(0), embedded_text.size(1), 1)
         if hasattr(self, 'gst'):
             embedded_gst = embedded_gst.repeat(1, embedded_text.size(1), 1)
             encoder_outputs = torch.cat(
