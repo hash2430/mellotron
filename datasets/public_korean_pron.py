@@ -49,6 +49,9 @@ def build_from_path(in_dir, out_dir, num_workers=16, tqdm=lambda x: x):
         except:
             print('ERROR! OUT OF RANGE: {}'.format(wav_filename))
         out_path = wav_path.replace('wav_16000', 'wav_22050')
+        dir = os.path.dirname(out_path)
+        if not os.path.exists(dir):
+            os.makedirs(dir)
         if int(index) % 400 == 0:
             futures_val.append(executor.submit(partial(_process_utterance, wav_path, out_path, speaker, text)))
         elif int(index) % 400 == 1:
@@ -83,9 +86,7 @@ def _process_utterance(in_path, out_path, speaker, text):
     new_samplerate = hparams.sampling_rate
 
     if old_samplerate != new_samplerate:
-        dir = os.path.dirname(out_path)
-        if not os.path.exists(dir):
-            os.makedirs(dir)
+
 
         duration = old_audio.shape[0] / old_samplerate
 
