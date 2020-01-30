@@ -52,11 +52,12 @@ class TextMelLoader(torch.utils.data.Dataset):
                     f.write('{}: {}\n'.format(key, value))
 
 
-        random.seed(1234)
-        random.shuffle(self.audiopaths_and_text)
+        # random.seed(1234)
+        # random.shuffle(self.audiopaths_and_text)
 
     def create_speaker_lookup_table(self, audiopaths_and_text):
-        speaker_ids = np.sort(np.unique([x[2] for x in audiopaths_and_text]))
+        speaker_list = [x[2] for x in audiopaths_and_text]
+        speaker_ids = np.sort(np.unique(speaker_list))
         d = {speaker_ids[i]: i for i in range(len(speaker_ids))}
         return d
 
