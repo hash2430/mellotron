@@ -14,7 +14,7 @@ from model import Tacotron2
 from data_utils import TextMelLoader, TextMelCollate
 from loss_function import Tacotron2Loss
 from logger import Tacotron2Logger
-from configs.korean_200113 import create_hparams
+from configs.single_init_200123 import create_hparams
 
 
 def reduce_tensor(tensor, n_gpus):
@@ -37,6 +37,28 @@ def init_distributed(hparams, n_gpus, rank, group_name):
         world_size=n_gpus, rank=rank, group_name=group_name)
 
     print("Done initializing distributed")
+
+def prepare_single_dataloaders(hparams, output_directory):
+    # Get data, data loaders and collate function ready
+    trainset = TextMelLoader('filelists/selvas_main_train.txt', hparams, output_directory=output_directory)
+    # debugging purpose
+    # trainset = TextMelLoader('filelists/selvas_main_valid.txt', hparams, output_directory=output_directory)
+    valset = TextMelLoader('filelists/selvas_main_valid.txt', hparams,
+                           speaker_ids=trainset.speaker_ids)
+    collate_fn = TextMelCollate(hparams.n_frames_per_step)
+
+    if hparams.distributed_run:
+        train_sampler = DistributedSampler(trainset)
+        shuffle = False
+    else:
+        train_sampler = None
+        shuffle = True
+
+    train_loader = DataLoader(trainset, num_workers=1, shuffle=shuffle,
+                              sampler=train_sampler,
+                              batch_size=hparams.batch_size, pin_memory=False,
+                              drop_last=True, collate_fn=collate_fn)
+    return train_loader, valset, collate_fn, train_sampler
 
 
 def prepare_dataloaders(hparams, output_directory):
@@ -184,8 +206,10 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
     logger = prepare_directories_and_logger(
         output_directory, log_directory, rank)
 
+    single_train_loader, single_valset, single_collate_fn, single_train_sampler = prepare_single_dataloaders(hparams, output_directory)
     train_loader, valset, collate_fn, train_sampler = prepare_dataloaders(hparams, output_directory)
-
+    single_train_loader.dataset.speaker_ids = train_loader.dataset.speaker_ids
+    single_valset.speaker_ids = train_loader.dataset.speaker_ids
     # Load checkpoint if one exists
     iteration = 0
     epoch_offset = 0
@@ -199,12 +223,70 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
             if hparams.use_saved_learning_rate:
                 learning_rate = _learning_rate
             iteration += 1  # next iteration is iteration + 1
-            epoch_offset = max(0, int(iteration / len(train_loader)))
+            epoch_offset = max(0, int(iteration / len(single_train_loader)))
 
     model.train()
     is_overflow = False
+    # init training loop with single speaker
+    for epoch in range(epoch_offset, 30):
+        print("Epoch: {}".format(epoch))
+        if single_train_sampler is not None:
+            single_train_sampler.set_epoch(epoch)
+        for i, batch in enumerate(single_train_loader):
+            start = time.perf_counter()
+            if iteration > 0 and iteration % hparams.learning_rate_anneal == 0:
+                learning_rate = max(
+                    hparams.learning_rate_min, learning_rate * 0.5)
+                for param_group in optimizer.param_groups:
+                    param_group['lr'] = learning_rate
+
+            model.zero_grad()
+            x, y = model.parse_batch(batch)
+            y_pred = model(x)
+
+            loss = criterion(y_pred, y)
+            if hparams.distributed_run:
+                reduced_loss = reduce_tensor(loss.data, n_gpus).item()
+            else:
+                reduced_loss = loss.item()
+
+            if hparams.fp16_run:
+                with amp.scale_loss(loss, optimizer) as scaled_loss:
+                    scaled_loss.backward()
+            else:
+                loss.backward()
+
+            if hparams.fp16_run:
+                grad_norm = torch.nn.utils.clip_grad_norm_(
+                    amp.master_params(optimizer), hparams.grad_clip_thresh)
+                is_overflow = math.isnan(grad_norm)
+            else:
+                grad_norm = torch.nn.utils.clip_grad_norm_(
+                    model.parameters(), hparams.grad_clip_thresh)
+
+            optimizer.step()
+
+            if not is_overflow and rank == 0:
+                duration = time.perf_counter() - start
+                print("Train loss {} {:.6f} Grad Norm {:.6f} {:.2f}s/it".format(
+                    iteration, reduced_loss, grad_norm, duration))
+                logger.log_training(
+                    reduced_loss, grad_norm, learning_rate, duration, iteration)
+
+            if not is_overflow and (iteration % hparams.iters_per_checkpoint == 0):
+                validate(model, criterion, single_valset, iteration,
+                        hparams.batch_size, n_gpus, single_collate_fn, logger,
+                        hparams.distributed_run, rank)
+                if rank == 0:
+                    checkpoint_path = os.path.join(
+                        output_directory, "checkpoint_{}".format(iteration))
+                    save_checkpoint(model, optimizer, learning_rate, iteration,
+                                    checkpoint_path)
+
+            iteration += 1
+
     # ================ MAIN TRAINNIG LOOP! ===================
-    for epoch in range(epoch_offset, hparams.epochs):
+    for epoch in range(30, hparams.epochs):
         print("Epoch: {}".format(epoch))
         if train_sampler is not None:
             train_sampler.set_epoch(epoch)
@@ -251,8 +333,8 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
 
             if not is_overflow and (iteration % hparams.iters_per_checkpoint == 0):
                 validate(model, criterion, valset, iteration,
-                        hparams.batch_size, n_gpus, collate_fn, logger,
-                        hparams.distributed_run, rank)
+                         hparams.batch_size, n_gpus, collate_fn, logger,
+                         hparams.distributed_run, rank)
                 if rank == 0:
                     checkpoint_path = os.path.join(
                         output_directory, "checkpoint_{}".format(iteration))
