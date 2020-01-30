@@ -267,7 +267,7 @@ class Decoder(nn.Module):
 
     def get_end_f0(self, f0s):
         B = f0s.size(0)
-        dummy = Variable(f0s.data.new(B, 1, f0s.size(1)).zero_())
+        dummy = Variable(f0s.data.new(B, f0s.size(1), 1).zero_()) #(B, C, T)
         return dummy
 
     def initialize_decoder_states(self, memory, mask):
