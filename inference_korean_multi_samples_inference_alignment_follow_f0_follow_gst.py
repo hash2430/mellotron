@@ -34,7 +34,7 @@ waveglow_path = 'models/waveglow_256channels_v4.pt'
 waveglow = torch.load(waveglow_path)['model'].cuda().eval()
 denoiser = Denoiser(waveglow).cuda().eval()
 arpabet_dict = cmudict.CMUDict('data/cmu_dictionary')
-audio_paths = 'data/examples_pfo.txt'
+audio_paths = 'data/examples_pfa.txt'
 test_set = TextMelLoader(audio_paths, hparams)
 datacollate = TextMelCollate(1)
 dataloader = DataLoader(test_set, num_workers=1, shuffle=False,batch_size=hparams.batch_size, pin_memory=False,

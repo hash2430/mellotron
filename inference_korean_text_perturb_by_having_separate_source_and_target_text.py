@@ -1,3 +1,6 @@
+'''
+This script is equivalent to multiple_samples_korean but it tests the case where target text is different from source text
+'''
 import matplotlib.pyplot as plt
 import IPython.display as ipd
 
@@ -25,7 +28,7 @@ hparams.batch_size = 1
 stft = TacotronSTFT(hparams.filter_length, hparams.hop_length, hparams.win_length,
                     hparams.n_mel_channels, hparams.sampling_rate, hparams.mel_fmin,
                     hparams.mel_fmax)
-speaker = "pmk"
+speaker = "fv02"
 checkpoint_path = '/mnt/sdc1/mellotron/single_init_200123/checkpoint_141000'
     # "models/mellotron_libritts.pt"
 mellotron = load_model(hparams).cuda().eval()
@@ -34,7 +37,7 @@ waveglow_path = 'models/waveglow_256channels_v4.pt'
 waveglow = torch.load(waveglow_path)['model'].cuda().eval()
 denoiser = Denoiser(waveglow).cuda().eval()
 arpabet_dict = cmudict.CMUDict('data/cmu_dictionary')
-audio_paths = 'data/examples_pfo.txt'
+audio_paths = 'data/examples_text_perterb_separate_text.txt'
 test_set = TextMelLoader(audio_paths, hparams)
 datacollate = TextMelCollate(1)
 dataloader = DataLoader(test_set, num_workers=1, shuffle=False,batch_size=hparams.batch_size, pin_memory=False,
@@ -51,6 +54,9 @@ for i, batch in enumerate(dataloader):
     text_encoded = x[0]
     mel = x[2]
     pitch_contour = x[6]
+    text = '귀에 염쯩이 생견네예'
+    text_encoded = torch.LongTensor(text_to_sequence(text, hparams.text_cleaners, int(1), arpabet_dict))[None,
+                   :].cuda()
 
     with torch.no_grad():
         # get rhythm (alignment map) using tacotron 2
@@ -67,4 +73,4 @@ for i, batch in enumerate(dataloader):
         top_db=25
         for j in range(len(audio)):
             wav, _ = librosa.effects.trim(audio[j], top_db=top_db, frame_length=2048, hop_length=512)
-            write("gen/refer_pitch_rythm_mel/{}/target-{}_refer-{}_topdb-{}_{}.wav".format(reference_speaker, speaker, reference_speaker, top_db, i*hparams.batch_size+j), hparams.sampling_rate, wav)
+            write("gen/text_perturbance_separate_text/target-{}_refer-{}_topdb-{}_{}_source_text.wav".format(speaker, reference_speaker, top_db, i*hparams.batch_size+j), hparams.sampling_rate, wav)

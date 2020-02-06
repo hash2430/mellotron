@@ -56,7 +56,7 @@ hparams = create_hparams()
 stft = TacotronSTFT(hparams.filter_length, hparams.hop_length, hparams.win_length,
                     hparams.n_mel_channels, hparams.sampling_rate, hparams.mel_fmin,
                     hparams.mel_fmax)
-checkpoint_path = '/past_projects/mellotron/checkpoints/korean_200113/checkpoint_176000'
+checkpoint_path = '/mnt/sdc1/mellotron/single_init_200123/checkpoint_141000'
     # "models/mellotron_libritts.pt"
 mellotron = load_model(hparams).cuda().eval()
 mellotron.load_state_dict(torch.load(checkpoint_path)['state_dict'])
@@ -64,7 +64,7 @@ waveglow_path = 'models/waveglow_256channels_v4.pt'
 waveglow = torch.load(waveglow_path)['model'].cuda().eval()
 denoiser = Denoiser(waveglow).cuda().eval()
 arpabet_dict = cmudict.CMUDict('data/cmu_dictionary')
-audio_paths = 'data/examples_filelist_korean.txt'
+audio_paths = 'data/examples_pfo.txt'
 dataloader = TextMelLoader(audio_paths, hparams)
 datacollate = TextMelCollate(1)
 file_idx = 0
@@ -92,7 +92,7 @@ with torch.no_grad():
     mel_outputs, mel_outputs_postnet, gate_outputs, rhythm = mellotron.forward(x)
     rhythm = rhythm.permute(1, 0, 2)
 # speaker_id = next(female_speakers) if np.random.randint(2) else next(male_speakers)
-speaker_id = torch.LongTensor([0]).cuda()
+speaker_id = torch.LongTensor([141]).cuda()
 
 with torch.no_grad():
     mel_outputs, mel_outputs_postnet, gate_outputs, _ = mellotron.inference_noattention(
@@ -105,4 +105,4 @@ plot_mel_f0_alignment(x[2].data.cpu().numpy()[0],
 with torch.no_grad():
     audio = denoiser(waveglow.infer(mel_outputs_postnet, sigma=0.8), 0.01)[:, 0]
     audio = audio.squeeze(0).cpu().numpy()
-    write("{}.wav".format('out_sample_korean'), hparams.sampling_rate, audio)
+    write("{}.wav".format('t'), hparams.sampling_rate, audio)
