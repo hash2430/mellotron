@@ -66,6 +66,10 @@ python preprocess.py --dataset=integrate_dataset
 * src: wav_22050/*.wav
 * dst: mel/\*.pt and f0/\*.pt
 
+## 6. initialize first few epochs with single speaker DB
+* Prepare separate train, valid filelists for single speaker 
+* Files for single speaker training and validation are also included in multispeaker filelists.
+* I experimented training initial 30 epochs with single speaker DB and it helped learning encoder-decoder alignment a lot.
 ## TODO
 * Undo step 5
     * Generating mel and f0 in preprocessing time did not increase learning speed.
