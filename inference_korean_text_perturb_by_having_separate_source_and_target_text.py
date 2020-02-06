@@ -1,5 +1,11 @@
 '''
-This script is equivalent to multiple_samples_korean but it tests the case where target text is different from source text
+This script is equivalent to multiple_samples_korean but it tests the case where target text is different from source
+text
+1. inference_korean_text_perturb_fail.py: It tries to give target text where source text should be given, so it fails to
+ obtain alignment between text and source mel.
+2. inference_korean_text_perturb_by_having_separate_source_and_target_text.py: It gives 2 separate texts. Alignment is
+obtained between source text and source mel while speech is generated on target text.
+
 '''
 import matplotlib.pyplot as plt
 import IPython.display as ipd

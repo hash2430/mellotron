@@ -46,7 +46,7 @@ def _integrate(train_file_lists, target_train_file_list):
         f.writelines(sources[0])
 
 def preprocess_public_korean_pron(args):
-    in_dir = '/past_projects/DB/korean_public'
+    in_dir = '/mnt/sdd1/korean_public'
     out_dir = 'filelists'
     public_korean_pron.build_from_path(in_dir, out_dir, args.num_workers, tqdm=tqdm)
 
