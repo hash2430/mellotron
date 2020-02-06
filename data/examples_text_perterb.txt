@@ -1,0 +1,10 @@
+/mnt/sdd1/selvas_wav/pmf/wav_trimmed_22050/pmf00081.wav|감자와 당근 중 어느 거스로 해보게써여|pmf|1
+/mnt/sdd1/selvas_wav/pmf/wav_trimmed_22050/pmf00157.wav|소세지라 그런지 임마시 그래|pmf|1
+/mnt/sdd1/selvas_wav/pmf/wav_trimmed_22050/pmf00081.wav|펀드와 적끔 중 어느 거스로 하시게써여|pmf|1
+/mnt/sdd1/selvas_wav/pmf/wav_trimmed_22050/pmf00157.wav|가으리라 그런지 임마시 조아|pmf|1
+/mnt/sdd1/korean_public/wav_22050/mv17/mv17_t09_s14.wav|자라가 나서씀니다.|mv17|1
+/mnt/sdd1/korean_public/wav_22050/mv17/mv17_t09_s14.wav|소라가 나서씀니다.|mv17|1
+/mnt/sdd1/korean_public/wav_22050/mv17/mv17_t09_s14.wav|소라가 마래씀니다.|mv17|1
+/mnt/sdd1/selvas_wav/pfo/wav_trimmed_22050/pfo00292.wav|귀에 염쯩이 생견네예|pfo|1
+/mnt/sdd1/selvas_wav/pfo/wav_trimmed_22050/pfo00292.wav|누네 염쯩이 생견네예|pfo|1
+/mnt/sdd1/selvas_wav/pfo/wav_trimmed_22050/pfo00292.wav|검나 무섭께 생견네예|pfo|1

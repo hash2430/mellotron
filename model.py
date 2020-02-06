@@ -614,10 +614,16 @@ class Tacotron2(nn.Module):
         embedded_text = self.encoder.inference(embedded_inputs)
         embedded_speakers = self.speaker_embedding(speaker_ids)[:, None]
         if hasattr(self, 'gst'):
-            if isinstance(style_input, int):
-                query = torch.zeros(1, 1, self.gst.encoder.ref_enc_gru_size).cuda()
-                GST = torch.tanh(self.gst.stl.embed)
-                key = GST[style_input].unsqueeze(0).expand(1, -1, -1)
+            if isinstance(style_input, int): # I don't know how to optimize this query vector for no reference case
+                # T = 1 for fixed-length reference embedding (unlike varaible-length ref. embedding where you use all time step output of GRU)
+                query = torch.zeros(text.size(0), 1, self.gst.encoder.ref_enc_gru_size).cuda() #(1,1,128)
+                GST = torch.tanh(self.gst.stl.embed) #(10, 32)
+                key = GST[style_input]
+                key = key.unsqueeze(0)
+                key = key.expand(1, -1, -1) #(1, 1, 32)
+
+                # key = GST[style_input].unsqueeze(0).expand(1, -1, -1)
+                # key = GST[style_input].unsqueeze(0).repeat(1, self.gst.stl.embed.size(0), self.gst.stl.embed.size(1))
                 embedded_gst = self.gst.stl.attention(query, key)
             else:
                 embedded_gst = self.gst(style_input)

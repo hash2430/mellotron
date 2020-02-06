@@ -50,7 +50,7 @@ class ReferenceEncoder(nn.Module):
             [nn.BatchNorm2d(num_features=hp.ref_enc_filters[i])
              for i in range(K)])
 
-        out_channels = self.calculate_channels(hp.n_mel_channels, 3, 2, 1, K)
+        out_channels = self.calculate_channels(hp.n_mel_channels, 3, 2, 1, K) # Final output channel of staked conv layers
         self.gru = nn.GRU(input_size=hp.ref_enc_filters[-1] * out_channels,
                           hidden_size=hp.ref_enc_gru_size,
                           batch_first=True)
@@ -93,12 +93,12 @@ class STL(nn.Module):
         init.normal_(self.embed, mean=0, std=0.5)
 
     def forward(self, inputs):
-        N = inputs.size(0)
+        N = inputs.size(0) # inputs = reference encoder output (B, ref_enc_gru_size)
         query = inputs.unsqueeze(1)
         keys = torch.tanh(self.embed).unsqueeze(0).expand(N, -1, -1)  # [N, token_num, token_embedding_size // num_heads]
         style_embed = self.attention(query, keys)
 
-        return style_embed
+        return style_embed #(B, 1, token_embed_dim)
 
 
 class MultiHeadAttention(nn.Module):
@@ -120,7 +120,7 @@ class MultiHeadAttention(nn.Module):
         self.W_value = nn.Linear(in_features=key_dim, out_features=num_units, bias=False)
 
     def forward(self, query, key):
-        querys = self.W_query(query)  # [N, T_q, num_units]
+        querys = self.W_query(query)  # [N, T_q, num_units] #if query is zero vector, it remains zero vector after linear transform without bias
         keys = self.W_key(key)  # [N, T_k, num_units]
         values = self.W_value(key)
 
@@ -128,11 +128,11 @@ class MultiHeadAttention(nn.Module):
         querys = torch.stack(torch.split(querys, split_size, dim=2), dim=0)  # [h, N, T_q, num_units/h]
         keys = torch.stack(torch.split(keys, split_size, dim=2), dim=0)  # [h, N, T_k, num_units/h]
         values = torch.stack(torch.split(values, split_size, dim=2), dim=0)  # [h, N, T_k, num_units/h]
-
         # score = softmax(QK^T / (d_k ** 0.5))
         scores = torch.matmul(querys, keys.transpose(2, 3))  # [h, N, T_q, T_k]
         scores = scores / (self.key_dim ** 0.5)
-        scores = F.softmax(scores, dim=3)
+        scores = F.softmax(scores, dim=3)# Scores are always 1s after softmax if T_k = 1
+        tmp_scores = scores.cpu().numpy() # For debugging
 
         # out = score * V
         out = torch.matmul(scores, values)  # [h, N, T_q, num_units/h]

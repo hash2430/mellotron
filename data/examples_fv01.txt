@@ -1,0 +1,4 @@
+/mnt/sdd1/korean_public/wav_22050/fv01/fv01_t02_s78.wav|자기도 모르게 도라섣따.|fv01|1
+/mnt/sdd1/korean_public/wav_22050/fv01/fv01_t04_s12.wav|내가 보기에는 그마나면 다 됀는데, 자꾸만 더 깍꼬 읻따.|fv01|1
+/mnt/sdd1/korean_public/wav_22050/fv01/fv01_t03_s60.wav|업써도 그마닌 그런 존재가 아니란 마리다.|fv01|1
+/mnt/sdd1/korean_public/wav_22050/fv01/fv01_t01_s03.wav|그래도 소녀는 마을 아이들과 함께 마냥 즐겁끼마 낻따.|fv01|1

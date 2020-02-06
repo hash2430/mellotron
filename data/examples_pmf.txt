@@ -1,0 +1,4 @@
+/mnt/sdd1/selvas_wav/pmf/wav_trimmed_22050/pmf00081.wav|감자와 당근 중 어느 두개다 해보게써여|pmf|1
+/mnt/sdd1/selvas_wav/pmf/wav_trimmed_22050/pmf00157.wav|소세지라 그런지 임마시 그래|pmf|1
+/mnt/sdd1/selvas_wav/pmf/wav_trimmed_22050/pmf00081.wav|펀드와 적끔 중 어느 거스로 하시게써여|pmf|1
+/mnt/sdd1/selvas_wav/pmf/wav_trimmed_22050/pmf00157.wav|가으리라 그런지 임마시 조아|pmf|1

@@ -1,0 +1,4 @@
+/mnt/sdd1/korean_public/wav_22050/fy01/fy01_t16_s34.wav|선무를 잔뜩 바든 기부니얻따.|fy01|1
+/mnt/sdd1/korean_public/wav_22050/fy01/fy01_t13_s22.wav|하지마 나이드른 투명안 가으랟싸를 바드며 낻까에 안자 참게와 줄다리기를 시자캄니다.|fy01|1
+/mnt/sdd1/korean_public/wav_22050/fy01/fy01_t10_s10.wav|"나무꾸 나저씨!"|fy01|1
+/mnt/sdd1/korean_public/wav_22050/fy01/fy01_t14_s13.wav|“그러면 지베 갈 차비도 업껜네.”|fy01|1
