@@ -7,7 +7,7 @@ import os
 hparams = create_hparams()
 from scipy.io.wavfile import write
 import torch
-def build_from_path(in_dir, out_dir, num_workers=16, tqdm=lambda x: x):
+def build_from_path(in_dir, out_dir, filelist_names, spk_name_idx,num_workers=16, tqdm=lambda x: x):
     pcm_files = []
     # for all speakers, count index and either add to train_list/eval_list/test_list
     speakers = os.listdir(in_dir)
@@ -29,15 +29,15 @@ def build_from_path(in_dir, out_dir, num_workers=16, tqdm=lambda x: x):
     for pcm_file in pcm_files:
         out_path = pcm_file.replace('raw', 'wav_22050')
         if int(index) % 400 == 0:
-            futures_val.append(executor.submit(partial(_process_utterance, pcm_file, out_path)))
+            futures_val.append(executor.submit(partial(_process_utterance, pcm_file, out_path, spk_name_idx)))
         elif int(index) % 400 == 1:
-            futures_test.append(executor.submit(partial(_process_utterance, pcm_file, out_path)))
+            futures_test.append(executor.submit(partial(_process_utterance, pcm_file, out_path, spk_name_idx)))
         else:
-            futures.append(executor.submit(partial(_process_utterance, pcm_file, out_path)))
+            futures.append(executor.submit(partial(_process_utterance, pcm_file, out_path, spk_name_idx)))
         index += 1
-    write_metadata([future.result() for future in tqdm(futures)], out_dir, 'train_file_list_pron.txt')
-    write_metadata([future.result() for future in tqdm(futures_val)], out_dir, 'valid_file_list_pron.txt')
-    write_metadata([future.result() for future in tqdm(futures_test)], out_dir, 'test_file_list_pron.txt')
+    write_metadata([future.result() for future in tqdm(futures)], out_dir, filelist_names[0])
+    write_metadata([future.result() for future in tqdm(futures_val)], out_dir, filelist_names[1])
+    write_metadata([future.result() for future in tqdm(futures_test)], out_dir, filelist_names[2])
 '''
 1. Read each file
 2. Down sample to 22050Hz
@@ -50,7 +50,7 @@ def build_from_path(in_dir, out_dir, num_workers=16, tqdm=lambda x: x):
                 "$", "?", "!","#"]
 '''
 # I have not decided whether to separate dierectories for train/eval/test
-def _process_utterance(in_path, out_path):
+def _process_utterance(in_path, out_path, spk_name_idx):
     out_path = out_path.replace('pcm', 'wav')
     dir = os.path.dirname(out_path)
     # wav is saved as int 16
@@ -66,7 +66,7 @@ def _process_utterance(in_path, out_path):
     with open(txt_file, 'r', encoding='utf-8-sig') as f:
         line = f.readline()
 
-    speaker = in_path.split('/')[5]
+    speaker = in_path.split('/')[spk_name_idx]
     write(out_path, 22050, wav)
     return (out_path, line.rstrip('\n'), speaker)
 

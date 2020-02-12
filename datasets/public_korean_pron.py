@@ -10,7 +10,7 @@ from scipy.io.wavfile import write
 import torch
 import glob
 from scipy import interpolate
-def build_from_path(in_dir, out_dir, num_workers=16, tqdm=lambda x: x):
+def build_from_path(in_dir, out_dir, filelist_names, num_workers=16, tqdm=lambda x: x):
     wav_paths = []
     # for all speakers, count index and either add to train_list/eval_list/test_list
     # Create wav path list
@@ -59,9 +59,9 @@ def build_from_path(in_dir, out_dir, num_workers=16, tqdm=lambda x: x):
         else:
             futures.append(executor.submit(partial(_process_utterance, wav_path, out_path, speaker, text)))
         index += 1
-    write_metadata([future.result() for future in tqdm(futures)], out_dir, 'public_korean_train_file_list_pron.txt')
-    write_metadata([future.result() for future in tqdm(futures_val)], out_dir, 'public_korean_valid_file_list_pron.txt')
-    write_metadata([future.result() for future in tqdm(futures_test)], out_dir, 'public_korean_test_file_list_pron.txt')
+    write_metadata([future.result() for future in tqdm(futures)], out_dir, filelist_names[0])
+    write_metadata([future.result() for future in tqdm(futures_val)], out_dir, filelist_names[1])
+    write_metadata([future.result() for future in tqdm(futures_test)], out_dir, filelist_names[2])
 '''
 1. Read each file
 2. Down sample to 22050Hz

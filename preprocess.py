@@ -18,9 +18,16 @@ hparams = create_hparams()
 
 def preprocess_selvas_multispeaker_pron(args):
     # in_dir = '/past_projects/DB/selvasai/selvasai_organized'
-    in_dir = '/mnt/sdd1/leftout_males'
+    # in_dir = '/mnt/sdd1/leftout_males'
+    in_dir = '/mnt/sdd1/selvas_emotion'
     out_dir = 'filelists'
-    selvas_multispeaker_pron.build_from_path(in_dir, out_dir, args.num_workers, tqdm=tqdm)
+    # in order of train-valid-text
+    filelists_name = [
+        'train_selvas_emotion.txt',
+        'valid_selvas_emotion.txt'
+        'test_selvas_emotion.txt'
+    ]
+    selvas_multispeaker_pron.build_from_path(in_dir, out_dir, filelists_name, 4, args.num_workers, tqdm=tqdm)
 
 # TODO: lang code is written in this procedure. Langcode==1 for korean-only case is hard-coded for now.
 # TODO: This must be fixed to support english and other languages as well.
@@ -50,7 +57,12 @@ def preprocess_public_korean_pron(args):
     # in_dir = '/mnt/sdd1/korean_public'
     in_dir = '/mnt/sdd1/leftout_korean_old_male'
     out_dir = 'filelists'
-    public_korean_pron.build_from_path(in_dir, out_dir, args.num_workers, tqdm=tqdm)
+    filelists_name = [
+        'train_korean_pron.txt',
+        'valid_korean_pron.txt'
+        'test_korean_pron.txt'
+    ]
+    public_korean_pron.build_from_path(in_dir, out_dir, filelists_name, args.num_workers, tqdm=tqdm)
 
 # This better not be done multithread because meta file is going to be locked and it will be inefficient.
 def integrate_dataset(args):
