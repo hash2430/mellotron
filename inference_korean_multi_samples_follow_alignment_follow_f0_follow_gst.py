@@ -30,7 +30,7 @@ checkpoint_path = '/mnt/sdc1/mellotron/single_init_200123/checkpoint_141000'
     # "models/mellotron_libritts.pt"
 mellotron = load_model(hparams).cuda().eval()
 mellotron.load_state_dict(torch.load(checkpoint_path)['state_dict'])
-waveglow_path = 'models/waveglow_256channels_v4.pt'
+waveglow_path = '/home/admin/projects/mellotron_init_with_single/models/waveglow_256channels_v4.pt'
 waveglow = torch.load(waveglow_path)['model'].cuda().eval()
 denoiser = Denoiser(waveglow).cuda().eval()
 arpabet_dict = cmudict.CMUDict('data/cmu_dictionary')
@@ -39,7 +39,7 @@ test_set = TextMelLoader(audio_paths, hparams)
 datacollate = TextMelCollate(1)
 dataloader = DataLoader(test_set, num_workers=1, shuffle=False,batch_size=hparams.batch_size, pin_memory=False,
                         drop_last=False, collate_fn = datacollate)
-speaker_ids = TextMelLoader("filelists/merge_korean_pron_train.txt", hparams).speaker_ids
+speaker_ids = TextMelLoader("/home/admin/projects/mellotron_init_with_single/filelists/merge_korean_pron_train.txt", hparams).speaker_ids
 speaker_id = torch.LongTensor([speaker_ids[speaker]]).cuda()
 
 for i, batch in enumerate(dataloader):

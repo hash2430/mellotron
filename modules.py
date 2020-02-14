@@ -122,7 +122,7 @@ class MultiHeadAttention(nn.Module):
     def forward(self, query, key):
         querys = self.W_query(query)  # [N, T_q, num_units] #if query is zero vector, it remains zero vector after linear transform without bias
         keys = self.W_key(key)  # [N, T_k, num_units]
-        values = self.W_value(key)
+        values = self.W_value(key) # Style token dimension is expanded
 
         split_size = self.num_units // self.num_heads
         querys = torch.stack(torch.split(querys, split_size, dim=2), dim=0)  # [h, N, T_q, num_units/h]
