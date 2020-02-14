@@ -1,0 +1,30 @@
+/mnt/sdd1/selvas_emotion/nea/wav_22050/nea00396.wav|동창외에 간는데 겨론 모 탄 사라믄 나바께 업떠라구|nea
+/mnt/sdd1/selvas_emotion/ner/wav_22050/ner00043.wav|어제 힌 셔츠에 거믄 바지 이벋떤 분 마리지|ner
+/mnt/sdd1/selvas_emotion/ema/wav_22050/ema00217.wav|파법 전조등이 구비된 차량은 일쎄대이며 개방영 전조등이 구비된 차량은 이세대임니다|ema
+/mnt/sdd1/selvas_emotion/nee/wav_22050/nee00118.wav|이 선무리 제일 마으메 드러|nee
+/mnt/sdd1/selvas_emotion/eme/wav_22050/eme00064.wav|이 메기는 오랟똥아 눔지기지 안코 생와라는 흔치 아는 어류임니다|eme
+/mnt/sdd1/selvas_emotion/emg/wav_22050/emg00037.wav|모스븐 일반 용과 다를 꺼시 하나도 업찌만 이름 그대로 모믄 푸른새글 띠고 읻따|emg
+/mnt/sdd1/selvas_emotion/emc/wav_22050/emc00358.wav|평타난 지형 때무네 감무니 업쓰며 우나 양 끄테 바단무리 자유로이 흘러드러 온다|emc
+/mnt/sdd1/selvas_emotion/nes/wav_22050/nes00311.wav|공금 횡녕에 금품 수수까지 진짜 너무하네여|nes
+/mnt/sdd1/selvas_emotion/nep/wav_22050/nep00394.wav|산 너머 사니라더니 학짜금 대출 끈나고 나니까 이제는 겨론자그미 문제야|nep
+/mnt/sdd1/selvas_emotion/ned/wav_22050/ned00394.wav|산 너머 사니라더니 학짜금 대출 끈나고 나니까 이제는 겨론자그미 문제야|ned
+/mnt/sdd1/selvas_emotion/neo/wav_22050/neo00182.wav|요즘 이릴 일팩 실처나고 읻꺼든 내 얼구레서 비치 나지|neo
+/mnt/sdd1/selvas_emotion/emd/wav_22050/emd00204.wav|오닉쓰 스톤과 호테리 호납뙨 개녀메서 영가므 러더 이르믈 지얻따|emd
+/mnt/sdd1/selvas_emotion/emi/wav_22050/emi00188.wav|쇠고기는 쉽께 질겨저 일반저그론 잘 사용아지 안는다|emi
+/mnt/sdd1/selvas_emotion/emh/wav_22050/emh00097.wav|멷 딸 전 과학짜드리 유전자 조자글 하여 인간배아를 만드럳따고 발표핻따|emh
+/mnt/sdd1/selvas_emotion/net/wav_22050/net00226.wav|회색삐츠로 가드칸 내 마음처럼 세상도 우중충애 보인다|net
+/mnt/sdd1/selvas_emotion/nef/wav_22050/nef00174.wav|내게 이런 행우니 차자왇따니 실가미 안 나|nef
+/mnt/sdd1/selvas_emotion/neq/wav_22050/neq00126.wav|역씨 이 집 평양냉며니 전구게서 최고야|neq
+/mnt/sdd1/selvas_emotion/neg/wav_22050/neg00297.wav|그 가수에 노래를 듣꼬 이쓰면 내 마으믈 절저라게 파고드러|neg
+/mnt/sdd1/selvas_emotion/neh/wav_22050/neh00023.wav|화장품도 유통기한과 제조 일짜를 꼭 화기나고 써야 해|neh
+/mnt/sdd1/selvas_emotion/nel/wav_22050/nel00154.wav|너와 함께 인느 니 순가니 영워내쓰면 조켇따|nel
+/mnt/sdd1/selvas_emotion/emb/wav_22050/emb00349.wav|각 지방마다 상왕에 따라 요리에 특썽이 두드러지게 나타난다|emb
+/mnt/sdd1/selvas_emotion/nei/wav_22050/nei00267.wav|다밈선생님께서 아주 편차느시다고 드러씀니다|nei
+/mnt/sdd1/selvas_emotion/nek/wav_22050/nek00030.wav|지무느로 버미늘 차즐 방버베 대해 알고 계세여|nek
+/mnt/sdd1/selvas_emotion/neb/wav_22050/neb00211.wav|시골 부모니미 보내주신 하냐글 보니 모기 멘다|neb
+/mnt/sdd1/selvas_emotion/nem/wav_22050/nem00329.wav|짜증 나게 노트부기 왜 이러케 느리냐|nem
+/mnt/sdd1/selvas_emotion/emf/wav_22050/emf00143.wav|트키 비체 온도는 수며네 빼노을 쑤 엄는 중요한 여카를 하고 이씀니다|emf
+/mnt/sdd1/selvas_emotion/nen/wav_22050/nen00207.wav|위로가 피료한데 겨테 아무도 업쓰니 울쩌캐|nen
+/mnt/sdd1/selvas_emotion/emj/wav_22050/emj00055.wav|모낭 내에 각찌리 채워저 읻끼 때무네 터른 각찔 래에 바켜 읻따|emj
+/mnt/sdd1/selvas_emotion/nec/wav_22050/nec00159.wav|영와에서나 볼 뻐판 풍경을 실쩨로 보다니 황오라다|nec
+/mnt/sdd1/selvas_emotion/nej/wav_22050/nej00094.wav|피자는 이러케 소느로 들고 머거야 제마시지|nej
