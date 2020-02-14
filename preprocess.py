@@ -1,7 +1,7 @@
 import argparse
 import os
 from tqdm import tqdm
-from datasets import libri_tts, selvas_multi_lbl,selvas_multispeaker_pron, public_korean_pron, check_file_integrity, generate_mel_f0
+from datasets import libri_tts, selvas_multi_lbl,selvas_multispeaker_pron, public_korean_pron, check_file_integrity, generate_mel_f0, f0_mean
 from configs.korean_200113 import create_hparams
 
 hparams = create_hparams()
@@ -116,13 +116,20 @@ def gen_mel_f0(args):
     lists = ['filelists/merge_korean_pron_train.txt', 'filelists/merge_korean_pron_valid.txt', 'filelists/merge_korean_pron_test.txt']
     generate_mel_f0.build_from_path(lists, hparams, tqdm=tqdm)
 
+def preprocess_cal_f0_scale_per_training_speaker(args):
+    # root = '/mnt/sdd1/selvas_emotion'
+    # root = '/mnt/sdd1/leftout_males'
+    # root = '/mnt/sdd1/leftout_korean_old_male/wav_22050'
+    root = '/mnt/sdd1/korean_public/wav_22050'
+    f0_mean.build_from_path(root, hparams, tqdm=tqdm)
+
 def main():
     parser = argparse.ArgumentParser()
     # parser.add_argument('--base_dir', default=os.path.expanduser('/past_projects/DB'))
     # parser.add_argument('--output', default='sitec')
     parser.add_argument('--dataset', required=True,
                         choices=['blizzard', 'ljspeech', 'sitec', 'sitec_short', 'selvas_multi', 'libri_tts', 'selvas_multispeaker_pron',
-                                 'integrate_dataset', 'public_korean_pron', 'check_file_integrity', 'generate_mel_f0'])
+                                 'integrate_dataset', 'public_korean_pron', 'check_file_integrity', 'generate_mel_f0', 'cal_f0_scale_per_training_speaker'])
     parser.add_argument('--hparams', default='',
                         help='Hyperparameter overrides as a comma-separated list of name=value pairs')
     parser.add_argument('--num_workers', type=int, default=12)
@@ -147,6 +154,8 @@ def main():
         check_for_file_integrity(args)
     elif args.dataset == 'generate_mel_f0':
         gen_mel_f0(args)
+    elif args.dataset == 'cal_f0_scale_per_training_speaker':
+        preprocess_cal_f0_scale_per_training_speaker(args)
 
 
 if __name__ == "__main__":
