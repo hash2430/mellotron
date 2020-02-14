@@ -6,4 +6,4 @@
 |
 4. relative_f0 (220)
 |
-5. as_is_mellotron           6. GST               7. TTS with Autoregresssive F0 prediction
+5. as_is_mellotron(v)           6. GST               7. TTS with Autoregresssive F0 prediction
