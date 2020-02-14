@@ -2,9 +2,12 @@
  This inference code normalizes f0 by
  1. Subtracting reference f0 mean and adding target f0 mean to voiced frames
  2. In case - ref_f0 + target_f0 < 0, target minimum f0 is used instead.
-
 '''
 
+''' 
+TODO: Fitting reference f0 contour into target speaker vocal range (min+alpha, max-beta) by scaling would give more natural result.
+High variance from reference signal gives unnatural sounding result
+'''
 import sys
 sys.path.append('waveglow/')
 
