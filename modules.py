@@ -132,7 +132,7 @@ class MultiHeadAttention(nn.Module):
         scores = torch.matmul(querys, keys.transpose(2, 3))  # [h, N, T_q, T_k]
         scores = scores / (self.key_dim ** 0.5)
         scores = F.softmax(scores, dim=3)# Scores are always 1s after softmax if T_k = 1
-        tmp_scores = scores.cpu().numpy() # For debugging
+        # tmp_scores = scores.cpu().numpy() # For debugging
 
         # out = score * V
         out = torch.matmul(scores, values)  # [h, N, T_q, num_units/h]

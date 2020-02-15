@@ -1,4 +1,6 @@
+# meta file이랑 data util 고치기 싫어서 dataset은 그대로 쓰면서 네트워크 훈련에서만 f0를 따돌리겠음!
 import os
+os.environ['CUDA_VISIBLE_DEVICES']=str(1)
 import time
 import argparse
 import math
@@ -14,7 +16,7 @@ from model import Tacotron2
 from data_utils import TextMelLoader, TextMelCollate
 from loss_function import Tacotron2Loss
 from logger import Tacotron2Logger
-from configs.single_init_200123 import create_hparams
+from configs.gst_200215 import create_hparams
 
 
 def reduce_tensor(tensor, n_gpus):
@@ -293,6 +295,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
         for i, batch in enumerate(train_loader):
             start = time.perf_counter()
             if iteration > 0 and iteration % hparams.learning_rate_anneal == 0:
+                hparams.p_teacher_forcing = hparams.p_teacher_forcing * 0.5
                 learning_rate = max(
                     hparams.learning_rate_min, learning_rate * 0.5)
                 for param_group in optimizer.param_groups:
