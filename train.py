@@ -1,4 +1,5 @@
 import os
+os.environ['CUDA_VISIBLE_DEVICES']='3'
 import time
 import argparse
 import math
@@ -12,9 +13,9 @@ from torch.utils.data import DataLoader
 
 from model import Tacotron2
 from data_utils import TextMelLoader, TextMelCollate
-from loss_function import Tacotron2Loss
+from loss_function import Tacotron2Loss_FFE
 from logger import Tacotron2Logger
-from configs.single_init_200123 import create_hparams
+from configs.tts_with_f0_200218_158_128_256 import create_hparams
 
 
 def reduce_tensor(tensor, n_gpus):
@@ -154,7 +155,7 @@ def validate(model, criterion, valset, iteration, batch_size, n_gpus,
         val_loss = 0.0
         for i, batch in enumerate(val_loader):
             x, y = model.parse_batch(batch)
-            y_pred = model(x)
+            y_pred = model(x, hparams.p_teacher_forcing)
             loss = criterion(y_pred, y)
             if distributed_run:
                 reduced_val_loss = reduce_tensor(loss.data, n_gpus).item()
@@ -201,7 +202,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
     if hparams.distributed_run:
         model = apply_gradient_allreduce(model)
 
-    criterion = Tacotron2Loss()
+    criterion = Tacotron2Loss_FFE()
 
     logger = prepare_directories_and_logger(
         output_directory, log_directory, rank)
@@ -235,6 +236,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
         for i, batch in enumerate(single_train_loader):
             start = time.perf_counter()
             if iteration > 0 and iteration % hparams.learning_rate_anneal == 0:
+                hparams.p_teacher_forcing = hparams.p_teacher_forcing * 0.5
                 learning_rate = max(
                     hparams.learning_rate_min, learning_rate * 0.5)
                 for param_group in optimizer.param_groups:
@@ -242,7 +244,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
 
             model.zero_grad()
             x, y = model.parse_batch(batch)
-            y_pred = model(x)
+            y_pred = model(x, hparams.p_teacher_forcing)
 
             loss = criterion(y_pred, y)
             if hparams.distributed_run:
@@ -293,6 +295,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
         for i, batch in enumerate(train_loader):
             start = time.perf_counter()
             if iteration > 0 and iteration % hparams.learning_rate_anneal == 0:
+                hparams.p_teacher_forcing = hparams.p_teacher_forcing * 0.5
                 learning_rate = max(
                     hparams.learning_rate_min, learning_rate * 0.5)
                 for param_group in optimizer.param_groups:
@@ -300,7 +303,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
 
             model.zero_grad()
             x, y = model.parse_batch(batch)
-            y_pred = model(x)
+            y_pred = model(x, hparams.p_teacher_forcing)
 
             loss = criterion(y_pred, y)
             if hparams.distributed_run:

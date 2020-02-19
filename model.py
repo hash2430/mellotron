@@ -250,6 +250,11 @@ class Decoder(nn.Module):
             hparams.decoder_rnn_dim + self.encoder_embedding_dim, 1,
             bias=True, w_init_gain='sigmoid')
 
+        self.f0_linear_layer = nn.Sequential(LinearNorm(
+            hparams.decoder_rnn_dim + self.encoder_embedding_dim, 1,
+            bias=True, w_init_gain='sigmoid'
+        ),nn.ReLU())
+
     def get_go_frame(self, memory):
         """ Gets all zeros frames to use as first decoder input
         PARAMS
@@ -323,7 +328,7 @@ class Decoder(nn.Module):
         decoder_inputs = decoder_inputs.transpose(0, 1)
         return decoder_inputs
 
-    def parse_decoder_outputs(self, mel_outputs, gate_outputs, alignments):
+    def parse_decoder_outputs(self, mel_outputs, gate_outputs, f0_outputs, alignments):
         """ Prepares decoder outputs for output
         PARAMS
         ------
@@ -341,11 +346,15 @@ class Decoder(nn.Module):
         alignments = torch.stack(alignments).transpose(0, 1)
         # (T_out, B) -> (B, T_out)
         gate_outputs = torch.stack(gate_outputs)
+        f0_outputs = torch.stack(f0_outputs)
         if len(gate_outputs.size()) > 1:
             gate_outputs = gate_outputs.transpose(0, 1)
+            f0_outputs = f0_outputs.transpose(0, 1)
         else:
             gate_outputs = gate_outputs[None]
+            f0_outputs = f0_outputs[None]
         gate_outputs = gate_outputs.contiguous()
+        f0_outputs = f0_outputs.contiguous()
         # (T_out, B, n_mel_channels) -> (B, T_out, n_mel_channels)
         mel_outputs = torch.stack(mel_outputs).transpose(0, 1).contiguous()
         # decouple frames per step
@@ -354,7 +363,7 @@ class Decoder(nn.Module):
         # (B, T_out, n_mel_channels) -> (B, n_mel_channels, T_out)
         mel_outputs = mel_outputs.transpose(1, 2)
 
-        return mel_outputs, gate_outputs, alignments
+        return mel_outputs, gate_outputs, f0_outputs, alignments
 
     def decode(self, decoder_input, attention_weights=None):
         """ Decoder step using stored states, attention and memory
@@ -399,10 +408,12 @@ class Decoder(nn.Module):
         decoder_output = self.linear_projection(
             decoder_hidden_attention_context)
 
-        gate_prediction = self.gate_layer(decoder_hidden_attention_context)
-        return decoder_output, gate_prediction, self.attention_weights
+        f0_prediction = self.f0_linear_layer(decoder_hidden_attention_context)
 
-    def forward(self, memory, decoder_inputs, memory_lengths, f0s):
+        gate_prediction = self.gate_layer(decoder_hidden_attention_context)
+        return decoder_output, gate_prediction, f0_prediction, self.attention_weights
+
+    def forward(self, memory, decoder_inputs, memory_lengths, f0s, p_teacher_forcing):
         """ Decoder forward pass for training
         PARAMS
         ------
@@ -416,7 +427,7 @@ class Decoder(nn.Module):
         gate_outputs: gate outputs from the decoder
         alignments: sequence of attention weights from the decoder
         """
-
+        self.p_teacher_forcing = p_teacher_forcing
         decoder_input = self.get_go_frame(memory).unsqueeze(0) # initialize with zero frame
         decoder_inputs = self.parse_decoder_inputs(decoder_inputs) # reflect n_frames_per_step
         decoder_inputs = torch.cat((decoder_input, decoder_inputs), dim=0)
@@ -424,31 +435,36 @@ class Decoder(nn.Module):
 
         # audio features
         f0_dummy = self.get_end_f0(f0s)
-        f0s = torch.cat((f0s, f0_dummy), dim=2)
+        f0s = torch.cat((f0s, f0_dummy), dim=2)#(B,C,T)
         f0s = F.relu(self.prenet_f0(f0s))
         f0s = f0s.permute(2, 0, 1) #(T,B,C)
 
         self.initialize_decoder_states( # initialize decoder member variables for dymanic tensor
             memory, mask=~get_mask_from_lengths(memory_lengths))
 
-        mel_outputs, gate_outputs, alignments = [], [], []
+        mel_outputs, gate_outputs, f0_outputs, alignments = [], [], [], []
         while len(mel_outputs) < decoder_inputs.size(0) - 1: # Decoder.forward() continues until g.t. mel length.
             if len(mel_outputs) == 0 or np.random.uniform(0.0, 1.0) <= self.p_teacher_forcing:
                 decoder_input = torch.cat((decoder_inputs[len(mel_outputs)],
                                            f0s[len(mel_outputs)]), dim=1)
             else:
-                decoder_input = torch.cat((self.prenet(mel_outputs[-1]),
-                                           f0s[len(mel_outputs)]), dim=1)
-            mel_output, gate_output, attention_weights = self.decode(
+                prev_f0 = f0_outputs[-1].unsqueeze(1).unsqueeze(2)
+                prev_f0 = self.prenet_f0(prev_f0)
+                prev_f0 = F.relu(prev_f0)
+                prev_f0 = prev_f0.squeeze(1)
+                decoder_input = torch.cat((self.prenet(mel_outputs[-1]), prev_f0
+                                           ), dim=1)
+            mel_output, gate_output, f0_output, attention_weights = self.decode(
                 decoder_input)
             mel_outputs += [mel_output.squeeze(1)]
+            f0_outputs += [f0_output.squeeze()]
             gate_outputs += [gate_output.squeeze()]
             alignments += [attention_weights]
 
-        mel_outputs, gate_outputs, alignments = self.parse_decoder_outputs(
-            mel_outputs, gate_outputs, alignments)
+        mel_outputs, gate_outputs, f0_outputs, alignments = self.parse_decoder_outputs(
+            mel_outputs, gate_outputs, f0_outputs, alignments)
 
-        return mel_outputs, gate_outputs, alignments
+        return mel_outputs, gate_outputs, f0_outputs, alignments
 
     def inference(self, memory, f0s):
         """ Decoder inference
@@ -569,7 +585,7 @@ class Tacotron2(nn.Module):
         f0_padded = to_gpu(f0_padded).float()
         return ((text_padded, input_lengths, mel_padded, max_len,
                  output_lengths, speaker_ids, f0_padded),
-                (mel_padded, gate_padded))
+                (mel_padded, gate_padded, f0_padded))
 
     def parse_output(self, outputs, output_lengths=None):
         if self.mask_padding and output_lengths is not None:
@@ -580,10 +596,11 @@ class Tacotron2(nn.Module):
             outputs[0].data.masked_fill_(mask, 0.0)
             outputs[1].data.masked_fill_(mask, 0.0)
             outputs[2].data.masked_fill_(mask[:, 0, :], 1e3)  # gate energies
+            outputs[3].data.masked_fill_(mask[:, 0, :], 0.0)
 
         return outputs
 
-    def forward(self, inputs):
+    def forward(self, inputs, p_teacher_forcing):
         inputs, input_lengths, targets, max_len, \
             output_lengths, speaker_ids, f0s = inputs
         input_lengths, output_lengths = input_lengths.data, output_lengths.data
@@ -598,14 +615,14 @@ class Tacotron2(nn.Module):
         encoder_outputs = torch.cat(
             (embedded_text, embedded_gst, embedded_speakers), dim=2)
 
-        mel_outputs, gate_outputs, alignments = self.decoder(
-            encoder_outputs, targets, memory_lengths=input_lengths, f0s=f0s)
+        mel_outputs, gate_outputs, f0_outputs, alignments = self.decoder(
+            encoder_outputs, targets, memory_lengths=input_lengths, f0s=f0s, p_teacher_forcing=p_teacher_forcing)
 
         mel_outputs_postnet = self.postnet(mel_outputs)
         mel_outputs_postnet = mel_outputs + mel_outputs_postnet
 
         return self.parse_output(
-            [mel_outputs, mel_outputs_postnet, gate_outputs, alignments],
+            [mel_outputs, mel_outputs_postnet, gate_outputs, f0_outputs, alignments],
             output_lengths)
 
     def inference(self, inputs):

@@ -1,7 +1,7 @@
 import random
 import torch
 from tensorboardX import SummaryWriter
-from plotting_utils import plot_alignment_to_numpy, plot_spectrogram_to_numpy
+from plotting_utils import plot_alignment_to_numpy, plot_spectrogram_to_numpy, plot_f0_to_numpy
 from plotting_utils import plot_gate_outputs_to_numpy
 
 
@@ -18,8 +18,8 @@ class Tacotron2Logger(SummaryWriter):
 
     def log_validation(self, reduced_loss, model, y, y_pred, iteration):
         self.add_scalar("validation.loss", reduced_loss, iteration)
-        _, mel_outputs, gate_outputs, alignments = y_pred
-        mel_targets, gate_targets = y
+        _, mel_outputs, gate_outputs, f0_outputs, alignments = y_pred
+        mel_targets, gate_targets,f0_targets = y
 
         # plot distribution of parameters
         for tag, value in model.named_parameters():
@@ -46,3 +46,11 @@ class Tacotron2Logger(SummaryWriter):
                 gate_targets[idx].data.cpu().numpy(),
                 torch.sigmoid(gate_outputs[idx]).data.cpu().numpy()),
             iteration, dataformats='HWC')
+        self.add_image(
+            "f0",
+            plot_f0_to_numpy(
+                f0_targets[idx].data.squeeze(1).squeeze(0).cpu().numpy(),
+                f0_outputs[idx].data.cpu().numpy()
+            ),
+            iteration, dataformats='HWC')
+

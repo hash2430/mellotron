@@ -10,7 +10,6 @@ def save_figure_to_numpy(fig):
     data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
     return data
 
-
 def plot_alignment_to_numpy(alignment, info=None):
     fig, ax = plt.subplots(figsize=(6, 4))
     im = ax.imshow(alignment, aspect='auto', origin='lower',
@@ -53,6 +52,22 @@ def plot_gate_outputs_to_numpy(gate_targets, gate_outputs):
 
     plt.xlabel("Frames (Green target, Red predicted)")
     plt.ylabel("Gate State")
+    plt.tight_layout()
+
+    fig.canvas.draw()
+    data = save_figure_to_numpy(fig)
+    plt.close()
+    return data
+
+def plot_f0_to_numpy(f0_targets, f0_outputs):
+    fig, ax = plt.subplots(figsize=(12, 3))
+    ax.scatter(range(len(f0_targets)), f0_targets, alpha=0.5,
+               color='green', marker='+', s=1, label='target')
+    ax.scatter(range(len(f0_outputs)), f0_outputs, alpha=0.5,
+               color='red', marker='.', s=1, label='predicted')
+
+    plt.xlabel("Frames (Green target, Red predicted)")
+    plt.ylabel("F0")
     plt.tight_layout()
 
     fig.canvas.draw()
