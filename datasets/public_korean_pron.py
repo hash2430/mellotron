@@ -114,4 +114,4 @@ def write_metadata(metadata, out_dir, out_file):
         for m in metadata:
             if m is None:
                 continue
-            f.write('|'.join([str(x) for x in m]) + '\n')
+            f.write('|'.join([str(x) for x in m]) + '|1\n')

@@ -18,14 +18,14 @@ hparams = create_hparams()
 
 def preprocess_selvas_multispeaker_pron(args):
     # in_dir = '/past_projects/DB/selvasai/selvasai_organized'
-    # in_dir = '/mnt/sdd1/leftout_males'
-    in_dir = '/mnt/sdd1/selvas_emotion'
+    in_dir = '/mnt/sdd1/leftout_males'
+    # in_dir = '/mnt/sdd1/selvas_emotion'
     out_dir = 'filelists'
     # in order of train-valid-text
     filelists_name = [
-        'train_selvas_emotion.txt',
-        'valid_selvas_emotion.txt'
-        'test_selvas_emotion.txt'
+        'train_file_list_pron_sub.txt',
+        'valid_file_list_pron_sub.txt',
+        'test_file_list_pron_sub.txt'
     ]
     selvas_multispeaker_pron.build_from_path(in_dir, out_dir, filelists_name, 4, args.num_workers, tqdm=tqdm)
 
@@ -59,7 +59,7 @@ def preprocess_public_korean_pron(args):
     out_dir = 'filelists'
     filelists_name = [
         'train_korean_pron.txt',
-        'valid_korean_pron.txt'
+        'valid_korean_pron.txt',
         'test_korean_pron.txt'
     ]
     public_korean_pron.build_from_path(in_dir, out_dir, filelists_name, args.num_workers, tqdm=tqdm)

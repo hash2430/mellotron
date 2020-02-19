@@ -53,8 +53,6 @@
 /mnt/sdd1/selvas_wav/pfh/wav_trimmed_22050/pfh00125.wav|상어라도 만나써 아니면 이너|pfh|1
 /mnt/sdd1/selvas_wav/avg/wav_trimmed_22050/avg00410.wav|선물 바드실 뿌니 어떤 부니신가여|avg|1
 /mnt/sdd1/selvas_wav/pfe/wav_trimmed_22050/pfe00062.wav|쑈핑몰 고객쎈터에서 심마 눠 니상 구입씨 상품꿘 일마 눠늘 지그파느 냉사는 하고 이써여|pfe|1
-/mnt/sdd1/selvas_wav/pfp/wav_trimmed_22050/pfp00053.wav|글쎄여 뭐시 관시민는디여|pfp|1
-/mnt/sdd1/selvas_wav/pfp/wav_trimmed_22050/pfp00261.wav|검나게 이쁘시네여|pfp|1
 /mnt/sdd1/selvas_wav/avf/wav_trimmed_22050/avf00069.wav|철또 광장 어장 삼님 양전 옥땁 상업 공업 모든 궐리와 이이글 다 빼앋꼬 세금과 도조를 자꾸 더 바다내 착취하엳따|avf|1
 /mnt/sdd1/selvas_wav/pmd/wav_trimmed_22050/pmd00542.wav|죄송암니다 제가 홀 써빙은 처으미라서여|pmd|1
 /mnt/sdd1/selvas_wav/pmd/wav_trimmed_22050/pmd00002.wav|우리에 관계가 처음처럼 되기는 어렵껟쩌|pmd|1
@@ -65,6 +63,8 @@
 /mnt/sdd1/selvas_wav/ave/wav_trimmed_22050/ave00291.wav|카드를 잠시 내려주세여 오버 베팅 하셔씀니다|ave|1
 /mnt/sdd1/selvas_wav/pfc/wav_trimmed_22050/pfc00057.wav|이용 기가네 따라 월 렌탈료가 달라지며 계약 중도해지 시 위약끄미 발쌩암니다|pfc|1
 /mnt/sdd1/selvas_wav/pfc/wav_trimmed_22050/pfc00551.wav|오느른 아주 쌀싸라네여 포그난 외투 하나 입꼬 외추라세여|pfc|1
+/mnt/sdd1/selvas_wav/pfo/wav_trimmed_22050/pfo00344.wav|체려기 억쑤로 마이 소모되니까 주벼네 응급처치를 할 쑤 인는 사라미 읻따카면 번가라 가면서 실씨하는 걷또 조씀니더|pfo|1
+/mnt/sdd1/selvas_wav/pfo/wav_trimmed_22050/pfo00315.wav|죄송아지만 그건 제가 할 쑤 업씀니더 전문가하고 상이해 보이소|pfo|1
 /mnt/sdd1/selvas_wav/pmj/wav_trimmed_22050/pmj00271.wav|실쩨로 처음 뵘는 걷 까타여 반가워여|pmj|1
 /mnt/sdd1/selvas_wav/pfm/wav_trimmed_22050/pfm00444.wav|새해 천날부터 무슨 니린가|pfm|1
 /mnt/sdd1/selvas_wav/pfm/wav_trimmed_22050/pfm00255.wav|도움 피료하면 언제든지 차자와여|pfm|1
@@ -284,21 +284,21 @@
 /mnt/sdd1/korean_public/wav_22050/my01/my01_t10_s40.wav|얼마 후 선녀드른 모교글 끈내고 자기에 날개오슬 차자 입끼 시자캐써여.|my01|1
 /mnt/sdd1/korean_public/wav_22050/mw14/mw14_t01_s46.wav|이 산과 논과 콩받꽈 수수바틀 동서로 갈라 남천강이 허리띠처럼 도라가고, 강기슬그로 띠엄띠엄 원두마기 서 이썯따.|mw14|1
 /mnt/sdd1/korean_public/wav_22050/mw14/mw14_t06_s43.wav|또 어르믈 만저 보고 차가우믈 느끼게 되면, 어르믄 차가운 성지를 가젇따는 지시글 얻께 되는 거시다.|mw14|1
-/mnt/sdd1/leftout_korean_old_male/wav_22050/mz08/mz08_t13_s27.wav|27. 가을 참게는 어찌나 마신는지 새끼주레 꿰어 지브로 가지고 가면 어머니도 이때마는 “공부 아 나고 어디 갇따 완냐?”고 나무라지 아느심니다.|mz08
-/mnt/sdd1/leftout_korean_old_male/wav_22050/mz02/mz02_t19_s05.wav|5. 그 더러우미 이루 마랄 쑤 업꼬 깡통 찌저진 거, 유리병 깨트려진 거, 오물 흐터저 인는 걷, 뼌소, 하수도, 음뇨수, 위허마기 짜기 업따.|mz02
-/mnt/sdd1/leftout_korean_old_male/wav_22050/mz01/mz01_t11_s15.wav|15. 호랑이는 며칠 굴믄지라 이러케 숩 소게서만 머기를 찯꼬 읻따가는 굴머 주글지도 모른다고 생가캐씀니다.|mz01
-/mnt/sdd1/leftout_korean_old_male/wav_22050/mz06/mz06_t10_s35.wav|35. 그 연몯 뚤레에는 꼳뜨리 피어 읻꼬 수피 우거저 꼬턍기와 풀 램새가 나무꾸늘 취하게 만드럳쩌.|mz06
-/mnt/sdd1/leftout_korean_old_male/wav_22050/mz09/mz09_t13_s20.wav|20. 가으리 오면 낻까는 조용애짐니다.|mz09
-/mnt/sdd1/leftout_korean_old_male/wav_22050/mz07/mz07_t11_s05.wav|5. "큰 호랑이가 오니 어서 우르믈 그처라."|mz07
-/mnt/sdd1/leftout_korean_old_male/wav_22050/mz05/mz05_t18_s24.wav|24. 어리니는 과실라무여 어르는 가위와 물뿌리개를 든 정원사이다.|mz05
-/mnt/sdd1/leftout_korean_old_male/wav_22050/mz04/mz04_t09_s04.wav|4. 시나드른 조타는 야근 다 써보앋찌만 용왕니메 병을 랃께 하지는 모태써여.|mz04
-/mnt/sdd1/leftout_korean_old_male/wav_22050/mz03/mz03_t11_s07.wav|7. “귀시니 온다, 귀시니.”|mz03
-/mnt/sdd1/leftout_males/pmg/wav_22050/pmg00407.wav|중간휴식 씨가네 공연장 안내요워네게 불편사항을 신고 핻찌만 달라지는 거 넙써써여|pmg
-/mnt/sdd1/leftout_males/pml/wav_22050/pml00418.wav|정말 분노에 대상이네여|pml
-/mnt/sdd1/leftout_males/pml/wav_22050/pml00210.wav|죄송암니다 카드 단말기에 고갱니메 카드가 일키지 안네여|pml
-/mnt/sdd1/leftout_males/pmh/wav_22050/pmh00499.wav|셰프 추천메뉴로 하시게씀니까|pmh
-/mnt/sdd1/leftout_males/pmo/wav_22050/pmo00183.wav|카메라에 이 버트늘 누르면 돼여 쉽쪼|pmo
-/mnt/sdd1/leftout_males/pmo/wav_22050/pmo00159.wav|아거를 활쭈로 위에 모 돌라오게 한 다음 비행기가 이동알 쑤 이썯때|pmo
-/mnt/sdd1/leftout_males/pmm/wav_22050/pmm00582.wav|으마근 우리 사믈 풍부하게 해주는 거 가타여|pmm
-/mnt/sdd1/leftout_males/pmn/wav_22050/pmn00218.wav|저려마고 지내기 펴난 집 쫌 소개해주세여|pmn
-/mnt/sdd1/leftout_males/pmn/wav_22050/pmn00299.wav|상장 하셛따면서여 경축 드려여|pmn
+/mnt/sdd1/leftout_males/pmg/wav_22050/pmg00407.wav|중간휴식 씨가네 공연장 안내요워네게 불편사항을 신고 핻찌만 달라지는 거 넙써써여|pmg|1
+/mnt/sdd1/leftout_males/pml/wav_22050/pml00418.wav|정말 분노에 대상이네여|pml|1
+/mnt/sdd1/leftout_males/pml/wav_22050/pml00210.wav|죄송암니다 카드 단말기에 고갱니메 카드가 일키지 안네여|pml|1
+/mnt/sdd1/leftout_males/pmh/wav_22050/pmh00499.wav|셰프 추천메뉴로 하시게씀니까|pmh|1
+/mnt/sdd1/leftout_males/pmo/wav_22050/pmo00183.wav|카메라에 이 버트늘 누르면 돼여 쉽쪼|pmo|1
+/mnt/sdd1/leftout_males/pmo/wav_22050/pmo00159.wav|아거를 활쭈로 위에 모 돌라오게 한 다음 비행기가 이동알 쑤 이썯때|pmo|1
+/mnt/sdd1/leftout_males/pmm/wav_22050/pmm00582.wav|으마근 우리 사믈 풍부하게 해주는 거 가타여|pmm|1
+/mnt/sdd1/leftout_males/pmn/wav_22050/pmn00218.wav|저려마고 지내기 펴난 집 쫌 소개해주세여|pmn|1
+/mnt/sdd1/leftout_males/pmn/wav_22050/pmn00299.wav|상장 하셛따면서여 경축 드려여|pmn|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz08/mz08_t13_s27.wav|가을 참게는 어찌나 마신는지 새끼주레 꿰어 지브로 가지고 가면 어머니도 이때마는 “공부 아 나고 어디 갇따 완냐?”고 나무라지 아느심니다.|mz08|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz02/mz02_t19_s05.wav|그 더러우미 이루 마랄 쑤 업꼬 깡통 찌저진 거, 유리병 깨트려진 거, 오물 흐터저 인는 걷, 뼌소, 하수도, 음뇨수, 위허마기 짜기 업따.|mz02|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz01/mz01_t11_s15.wav|호랑이는 며칠 굴믄지라 이러케 숩 소게서만 머기를 찯꼬 읻따가는 굴머 주글지도 모른다고 생가캐씀니다.|mz01|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz06/mz06_t10_s35.wav|그 연몯 뚤레에는 꼳뜨리 피어 읻꼬 수피 우거저 꼬턍기와 풀 램새가 나무꾸늘 취하게 만드럳쩌.|mz06|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz09/mz09_t13_s20.wav|가으리 오면 낻까는 조용애짐니다.|mz09|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz07/mz07_t11_s05.wav|"큰 호랑이가 오니 어서 우르믈 그처라."|mz07|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz05/mz05_t18_s24.wav|어리니는 과실라무여 어르는 가위와 물뿌리개를 든 정원사이다.|mz05|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz04/mz04_t09_s04.wav|시나드른 조타는 야근 다 써보앋찌만 용왕니메 병을 랃께 하지는 모태써여.|mz04|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz03/mz03_t11_s07.wav|“귀시니 온다, 귀시니.”|mz03|1

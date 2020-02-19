@@ -75,4 +75,4 @@ def _process_utterance(in_path, out_path, spk_name_idx):
 def write_metadata(metadata, out_dir, out_file):
     with open(os.path.join(out_dir, out_file), 'w', encoding='utf-8') as f:
         for m in metadata:
-            f.write('|'.join([str(x) for x in m]) + '\n')
+            f.write('|'.join([str(x) for x in m]) + '|1\n')
