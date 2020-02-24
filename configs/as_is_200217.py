@@ -24,8 +24,8 @@ def create_hparams(hparams_string=None, verbose=False):
         ################################
         # Data Parameters             #
         ################################
-        training_files='filelists/extended_merge_korean_pron_train.txt',
-        validation_files='filelists/extended_merge_korean_pron_valid.txt',
+        training_files='filelists/wav_less_than_12s_158_speakers_train.txt',
+        validation_files='filelists/wav_less_than_12s_158_speakers_valid.txt',
         text_cleaners=['korean_cleaners'],
         p_arpabet=1.0,
         cmudict_path="data/cmu_dictionary",
