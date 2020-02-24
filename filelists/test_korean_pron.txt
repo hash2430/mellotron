@@ -1,0 +1,10 @@
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz08/mz08_t10_s49.wav|"여보세여, 선녀님!"|mz08|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz08/mz08_t16_s34.wav|선무를 잔뜩 바든 기부니얻따.|mz08|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz02/mz02_t11_s22.wav|"무슨 이리라도 생견나?”|mz02|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz01/mz01_t09_s10.wav|시나드리 걱쩡스런 표정으로 마래써여.|mz01|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz06/mz06_t10_s72.wav|"아아, 이를 어쩌나......"|mz06|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz09/mz09_t10_s14.wav|나무꾸는 사스믈 얼른 숩 소게 숨겨 주어써여.|mz09|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz07/mz07_t19_s09.wav|나는 방아기면 대개 여르믈 텅 빈 서우레서 산다.|mz07|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz05/mz05_t10_s44.wav|"얘드라, 시가니 다 되얻꾸나".|mz05|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz04/mz04_t09_s58.wav|"세상에 가늘 떼어 노코 다니는 동무리 어디 인니?"|mz04|1
+/mnt/sdd1/leftout_korean_old_male/wav_22050/mz03/mz03_t16_s30.wav|그리고 고마운 여닌드른 어느새 사람들 소그로 사라저 인사조차 할 쑤 업썯따.|mz03|1
