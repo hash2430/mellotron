@@ -7,6 +7,7 @@ from torch.nn import functional as F
 from layers import ConvNorm, LinearNorm
 from utils import to_gpu, get_mask_from_lengths
 from modules import GST
+from speaker_classifier import gradient_reversal_layer, Classifier
 
 drop_rate = 0.5
 class LocationLayer(nn.Module):
@@ -539,6 +540,7 @@ class Decoder(nn.Module):
 class Tacotron2(nn.Module):
     def __init__(self, hparams):
         super(Tacotron2, self).__init__()
+        self.hparams = hparams
         self.mask_padding = hparams.mask_padding
         self.fp16_run = hparams.fp16_run
         self.n_mel_channels = hparams.n_mel_channels
@@ -555,6 +557,7 @@ class Tacotron2(nn.Module):
             self.gst = GST(hparams)
         self.speaker_embedding = nn.Embedding(
             hparams.n_speakers, hparams.speaker_embedding_dim)
+        self.speaker_classifier = Classifier(hparams.token_embedding_size, hparams.classifier_hidden_dim, hparams.n_speakers)
 
     def parse_batch(self, batch):
         text_padded, input_lengths, mel_padded, gate_padded, \
@@ -567,9 +570,14 @@ class Tacotron2(nn.Module):
         output_lengths = to_gpu(output_lengths).long()
         speaker_ids = to_gpu(speaker_ids.data).long()
         f0_padded = to_gpu(f0_padded).float()
+        speaker_embedding = self.speaker_embedding(speaker_ids)
+        speaker_label = np.zeros((self.hparams.batch_size, self.hparams.n_speakers), np.int)
+        for i in range (self.hparams.batch_size):
+            speaker_label[i][speaker_ids[i]] = 1
+        speaker_label = torch.from_numpy(speaker_label)
         return ((text_padded, input_lengths, mel_padded, max_len,
                  output_lengths, speaker_ids, f0_padded),
-                (mel_padded, gate_padded))
+                (mel_padded, gate_padded, speaker_ids))
 
     def parse_output(self, outputs, output_lengths=None):
         if self.mask_padding and output_lengths is not None:
@@ -592,6 +600,7 @@ class Tacotron2(nn.Module):
         embedded_text = self.encoder(embedded_inputs, input_lengths)
         embedded_speakers = self.speaker_embedding(speaker_ids)[:, None]
         embedded_gst = self.gst(targets)
+        embedded_gst_const = embedded_gst
         embedded_gst = embedded_gst.repeat(1, embedded_text.size(1), 1)
         embedded_speakers = embedded_speakers.repeat(1, embedded_text.size(1), 1)
 
@@ -604,8 +613,12 @@ class Tacotron2(nn.Module):
         mel_outputs_postnet = self.postnet(mel_outputs)
         mel_outputs_postnet = mel_outputs + mel_outputs_postnet
 
+        # grl from speaker classifier
+        embedded_gst_grl = gradient_reversal_layer(embedded_gst_const)
+        speaker_predicted = self.speaker_classifier(embedded_gst_grl)
+
         return self.parse_output(
-            [mel_outputs, mel_outputs_postnet, gate_outputs, alignments],
+            [mel_outputs, mel_outputs_postnet, gate_outputs, alignments, speaker_predicted],
             output_lengths)
 
     def inference(self, inputs):
@@ -643,8 +656,11 @@ class Tacotron2(nn.Module):
         mel_outputs_postnet = self.postnet(mel_outputs)
         mel_outputs_postnet = mel_outputs + mel_outputs_postnet
 
+        # grl from speaker classifier: I missed grl module here by mistake but it does nothing in inference anyway.
+        speaker_predicted = self.speaker_classifier(embedded_gst)
+
         return self.parse_output(
-            [mel_outputs, mel_outputs_postnet, gate_outputs, alignments])
+            [mel_outputs, mel_outputs_postnet, gate_outputs, alignments, speaker_predicted])
 
     def inference_noattention(self, inputs):
         text, style_input, speaker_ids, f0s, attention_map = inputs
@@ -675,5 +691,8 @@ class Tacotron2(nn.Module):
         mel_outputs_postnet = self.postnet(mel_outputs)
         mel_outputs_postnet = mel_outputs + mel_outputs_postnet
 
+        # grl from speaker classifier: I missed grl module here by mistake but it does nothing in inference anyway.
+        speaker_predicted = self.speaker_classifier(embedded_gst)
+
         return self.parse_output(
-            [mel_outputs, mel_outputs_postnet, gate_outputs, alignments])
+            [mel_outputs, mel_outputs_postnet, gate_outputs, alignments, speaker_predicted])

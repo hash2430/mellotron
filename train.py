@@ -1,4 +1,5 @@
 import os
+os.environ['CUDA_VISIBLE_DEVICES']='2'
 import time
 import argparse
 import math
@@ -12,9 +13,9 @@ from torch.utils.data import DataLoader
 
 from model import Tacotron2
 from data_utils import TextMelLoader, TextMelCollate
-from loss_function import Tacotron2Loss
+from loss_function import Tacotron2Loss_GRL
 from logger import Tacotron2Logger
-from configs.as_is_200217 import create_hparams
+from configs.grl_200224 import create_hparams
 
 
 def reduce_tensor(tensor, n_gpus):
@@ -201,7 +202,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
     if hparams.distributed_run:
         model = apply_gradient_allreduce(model)
 
-    criterion = Tacotron2Loss()
+    criterion = Tacotron2Loss_GRL(hparams)
 
     logger = prepare_directories_and_logger(
         output_directory, log_directory, rank)

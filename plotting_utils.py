@@ -59,3 +59,20 @@ def plot_gate_outputs_to_numpy(gate_targets, gate_outputs):
     data = save_figure_to_numpy(fig)
     plt.close()
     return data
+
+def plot_speaker(speaker_targets, speaker_outputs):
+    fig, ax = plt.subplots(figsize=(4.7, 2.18))
+    ax.scatter(range(1), speaker_targets, alpha=0.5,
+               color='green', marker='+', s=2, label='target')
+    ax.scatter(range(len(speaker_outputs)), speaker_outputs, alpha=0.5,
+               color='red', marker='.', s=2, label='predicted')
+
+    plt.xlabel("Speakers (Green target, Red predicted)")
+    plt.ylabel("Log softmax")
+    plt.tight_layout()
+
+    fig.canvas.draw()
+    data = save_figure_to_numpy(fig)
+    plt.close()
+    return data
+
