@@ -570,11 +570,11 @@ class Tacotron2(nn.Module):
         output_lengths = to_gpu(output_lengths).long()
         speaker_ids = to_gpu(speaker_ids.data).long()
         f0_padded = to_gpu(f0_padded).float()
-        speaker_embedding = self.speaker_embedding(speaker_ids)
-        speaker_label = np.zeros((self.hparams.batch_size, self.hparams.n_speakers), np.int)
-        for i in range (self.hparams.batch_size):
-            speaker_label[i][speaker_ids[i]] = 1
-        speaker_label = torch.from_numpy(speaker_label)
+        # speaker_embedding = self.speaker_embedding(speaker_ids)
+        # speaker_label = np.zeros((self.hparams.batch_size, self.hparams.n_speakers), np.int)
+        # for i in range (self.hparams.batch_size):
+        #     speaker_label[i][speaker_ids[i]] = 1
+        # speaker_label = torch.from_numpy(speaker_label)
         return ((text_padded, input_lengths, mel_padded, max_len,
                  output_lengths, speaker_ids, f0_padded),
                 (mel_padded, gate_padded, speaker_ids))
