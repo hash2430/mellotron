@@ -1,4 +1,5 @@
-/mnt/sdd1/selvas_wav/pfa/wav_trimmed_22050/pfa00226.wav|구십팔쎈티미터 임니다 다른 걷또 알려드릴까여|pfa|1
-/mnt/sdd1/selvas_wav/pfa/wav_trimmed_22050/pfa00003.wav|고갱님께서 구이파신 건 칠련 저니지만 이 모데리 처음 생산된 건 삼심년 저니거든녀|pfa|1
-/mnt/sdd1/selvas_wav/pfa/wav_trimmed_22050/pfa00251.wav|그 사라미 남긴 편지를 봐써여 일련만 슬퍼하고 자시네 행보글 차즈라고 썯떠군녀|pfa|1
-/mnt/sdd1/selvas_wav/pfa/wav_trimmed_22050/pfa00018.wav|내부 세차는녀|pfa|1
+/mnt/sdd1/selvas_wav/pfa/wav_trimmed_22050/pfa00220.wav|구십팔쎈티미터 임니다 다른 걷또 알려드릴까여|pfa|1
+/mnt/sdd1/selvas_wav/pfa/wav_trimmed_22050/pfa00220.wav|고갱님께서 구이파신 건 칠련 저니지만 이 모데리 처음 생산된 건 삼심년 저니거든녀|pfa|1
+/mnt/sdd1/selvas_wav/pfa/wav_trimmed_22050/pfa00220.wav|그 사라미 남긴 편지를 봐써여 일련만 슬퍼하고 자시네 행보글 차즈라고 썯떠군녀|pfa|1
+/mnt/sdd1/selvas_wav/pfa/wav_trimmed_22050/pfa00220.wav|내부 세차는녀|pfa|1
+/mnt/sdd1/selvas_wav/pfa/wav_trimmed_22050/pfa00220.wav|제가 한번 아무 문장이나 말해보게씀니다|pfa|1
