@@ -40,25 +40,25 @@ class ReferenceEncoder(nn.Module):
         K = len(hp.ref_enc_filters)
         filters = [1] + hp.ref_enc_filters
 
-        convs = [nn.Conv2d(in_channels=filters[i],
+        convs = [nn.Conv1d(in_channels=filters[i],
                            out_channels=filters[i + 1],
-                           kernel_size=(3, 3),
-                           stride=(2, 2),
-                           padding=(1, 1)) for i in range(K)]
+                           kernel_size=(3),
+                           stride=(2),
+                           padding=(1)) for i in range(K)]
         self.convs = nn.ModuleList(convs)
         self.bns = nn.ModuleList(
-            [nn.BatchNorm2d(num_features=hp.ref_enc_filters[i])
+            [nn.BatchNorm1d(num_features=hp.ref_enc_filters[i])
              for i in range(K)])
 
         out_channels = self.calculate_channels(hp.n_mel_channels, 3, 2, 1, K) # Final output channel of staked conv layers
         self.gru = nn.GRU(input_size=hp.ref_enc_filters[-1] * out_channels,
                           hidden_size=hp.ref_enc_gru_size,
                           batch_first=True)
-        self.n_mel_channels = hp.n_mel_channels
+        self.n_f0_channels = 1
         self.ref_enc_gru_size = hp.ref_enc_gru_size
 
     def forward(self, inputs):
-        out = inputs.view(inputs.size(0), 1, -1, self.n_mel_channels)
+        out = inputs.view(inputs.size(0), 1, -1, 1)
         for conv, bn in zip(self.convs, self.bns):
             out = conv(out)
             out = bn(out)
@@ -145,10 +145,10 @@ class GST(nn.Module):
     def __init__(self, hp):
         super().__init__()
         self.encoder = ReferenceEncoder(hp)
-        self.stl = STL(hp)
+        self.secondary_attention = MultiHeadAttention(hp.encoder_embedding_dim, hp.ref_enc_gru_size, hp.token_embedding_size, hp.num_heads)
 
     def forward(self, inputs):
         enc_out = self.encoder(inputs)
-        style_embed = self.stl(enc_out)
+        style_embed = self.secondary_attention(enc_out)
 
         return style_embed

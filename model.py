@@ -577,8 +577,8 @@ class Tacotron2(nn.Module):
         embedded_inputs = self.embedding(inputs).transpose(1, 2)
         embedded_text = self.encoder(embedded_inputs, input_lengths)
         embedded_speakers = self.speaker_embedding(speaker_ids)[:, None]
-        embedded_gst = self.gst(targets)
-        embedded_gst = embedded_gst.repeat(1, embedded_text.size(1), 1)
+        embedded_gst = self.gst(f0s)
+        # embedded_gst = embedded_gst.repeat(1, embedded_text.size(1), 1)
         embedded_speakers = embedded_speakers.repeat(1, embedded_text.size(1), 1)
 
         encoder_outputs = torch.cat(
@@ -612,11 +612,11 @@ class Tacotron2(nn.Module):
                 # key = GST[style_input].unsqueeze(0).repeat(1, self.gst.stl.embed.size(0), self.gst.stl.embed.size(1))
                 embedded_gst = self.gst.stl.attention(query, key)
             else:
-                embedded_gst = self.gst(style_input)
+                embedded_gst = self.gst(f0s)
 
         embedded_speakers = embedded_speakers.repeat(1, embedded_text.size(1), 1)
         if hasattr(self, 'gst'):
-            embedded_gst = embedded_gst.repeat(1, embedded_text.size(1), 1)
+            # embedded_gst = embedded_gst.repeat(1, embedded_text.size(1), 1)
             encoder_outputs = torch.cat(
                 (embedded_text, embedded_gst, embedded_speakers), dim=2)
         else:
@@ -644,11 +644,11 @@ class Tacotron2(nn.Module):
                 key = GST[style_input].unsqueeze(0).expand(1, -1, -1)
                 embedded_gst = self.gst.stl.attention(query, key)
             else:
-                embedded_gst = self.gst(style_input)
+                embedded_gst = self.gst(f0s)
 
         embedded_speakers = embedded_speakers.repeat(embedded_text.size(0), embedded_text.size(1), 1)
         if hasattr(self, 'gst'):
-            embedded_gst = embedded_gst.repeat(1, embedded_text.size(1), 1)
+            # embedded_gst = embedded_gst.repeat(1, embedded_text.size(1), 1)
             encoder_outputs = torch.cat(
                 (embedded_text, embedded_gst, embedded_speakers), dim=2)
         else:
