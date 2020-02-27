@@ -49,16 +49,16 @@ class ReferenceEncoder(nn.Module):
         self.bns = nn.ModuleList(
             [nn.BatchNorm1d(num_features=hp.ref_enc_filters[i])
              for i in range(K)])
-
-        out_channels = self.calculate_channels(hp.n_mel_channels, 3, 2, 1, K) # Final output channel of staked conv layers
+        self.n_f0_channels = 1
+        out_channels = self.calculate_channels(self.n_f0_channels, 3, 2, 1, K) # Final output channel of staked conv layers
         self.gru = nn.GRU(input_size=hp.ref_enc_filters[-1] * out_channels,
                           hidden_size=hp.ref_enc_gru_size,
                           batch_first=True)
-        self.n_f0_channels = 1
+
         self.ref_enc_gru_size = hp.ref_enc_gru_size
 
     def forward(self, inputs):
-        out = inputs.view(inputs.size(0), 1, -1, 1)
+        out = inputs.view(inputs.size(0), 1, -1, self.n_f0_channels)
         for conv, bn in zip(self.convs, self.bns):
             out = conv(out)
             out = bn(out)
@@ -68,8 +68,8 @@ class ReferenceEncoder(nn.Module):
         N, T = out.size(0), out.size(1)
         out = out.contiguous().view(N, T, -1)  # [N, Ty//2^K, 128*n_mels//2^K]
 
-        _, out = self.gru(out)
-        return out.squeeze(0)
+        gru_out_all_step, out = self.gru(out)
+        return gru_out_all_step
 
     def calculate_channels(self, L, kernel_size, stride, pad, n_convs):
         for _ in range(n_convs):
@@ -147,8 +147,10 @@ class GST(nn.Module):
         self.encoder = ReferenceEncoder(hp)
         self.secondary_attention = MultiHeadAttention(hp.encoder_embedding_dim, hp.ref_enc_gru_size, hp.token_embedding_size, hp.num_heads)
 
-    def forward(self, inputs):
+    def forward(self, inputs, text_embedding):
         enc_out = self.encoder(inputs)
-        style_embed = self.secondary_attention(enc_out)
+        key = enc_out
+        query = text_embedding
+        style_embed = self.secondary_attention(query, key)
 
         return style_embed

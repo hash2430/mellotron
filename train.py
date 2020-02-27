@@ -16,7 +16,7 @@ from model import Tacotron2
 from data_utils import TextMelLoader, TextMelCollate
 from loss_function import Tacotron2Loss
 from logger import Tacotron2Logger
-from configs.gst_200220 import create_hparams
+from configs.variable_length_200226 import create_hparams
 
 
 def reduce_tensor(tensor, n_gpus):
@@ -191,7 +191,6 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
     torch.cuda.manual_seed(hparams.seed)
 
     model = load_model(hparams)
-    model = torch.nn.DataParallel(model)
     learning_rate = hparams.learning_rate
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate,
                                  weight_decay=hparams.weight_decay)
