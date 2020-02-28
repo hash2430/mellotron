@@ -9,4 +9,5 @@
 5. as_is_mellotron           6. GST               7. TTS with Autoregresssive F0 prediction
 |                            |
 8. grl                       9. mellotron_variable_length_reference_embedding
-
+                             |
+							 10. vlre_1D(v)

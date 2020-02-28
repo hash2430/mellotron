@@ -50,15 +50,18 @@ class ReferenceEncoder(nn.Module):
             [nn.BatchNorm1d(num_features=hp.ref_enc_filters[i])
              for i in range(K)])
         self.n_f0_channels = 1
-        out_channels = self.calculate_channels(self.n_f0_channels, 3, 2, 1, K) # Final output channel of staked conv layers
-        self.gru = nn.GRU(input_size=hp.ref_enc_filters[-1] * out_channels,
+        # out_channels = self.calculate_channels(self.n_f0_channels, 3, 2, 1, K) # Final output channel of staked conv layers
+        # self.gru = nn.GRU(input_size=hp.ref_enc_filters[-1] * out_channels,
+        #                   hidden_size=hp.ref_enc_gru_size,
+        #                   batch_first=True)
+        self.gru = nn.GRU(input_size=hp.ref_enc_filters[-1],
                           hidden_size=hp.ref_enc_gru_size,
                           batch_first=True)
 
         self.ref_enc_gru_size = hp.ref_enc_gru_size
 
     def forward(self, inputs):
-        out = inputs.view(inputs.size(0), 1, -1, self.n_f0_channels)
+        out = inputs.view(inputs.size(0), 1, -1)
         for conv, bn in zip(self.convs, self.bns):
             out = conv(out)
             out = bn(out)

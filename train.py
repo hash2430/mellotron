@@ -1,12 +1,13 @@
 # meta file이랑 data util 고치기 싫어서 dataset은 그대로 쓰면서 네트워크 훈련에서만 f0를 따돌리겠음!
 import os
-os.environ['CUDA_VISIBLE_DEVICES']='0, 1'
+os.environ['CUDA_VISIBLE_DEVICES']='1'
 import time
 import argparse
 import math
 from numpy import finfo
 
 import torch
+print(torch.cuda.is_available())
 from distributed import apply_gradient_allreduce
 import torch.distributed as dist
 from torch.utils.data.distributed import DistributedSampler
