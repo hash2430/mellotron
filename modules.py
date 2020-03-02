@@ -40,14 +40,14 @@ class ReferenceEncoder(nn.Module):
         K = len(hp.ref_enc_filters)
         filters = [1] + hp.ref_enc_filters
 
-        convs = [nn.Conv1d(in_channels=filters[i],
+        convs = [nn.Conv2d(in_channels=filters[i],
                            out_channels=filters[i + 1],
-                           kernel_size=(3),
-                           stride=(2),
-                           padding=(1)) for i in range(K)]
+                           kernel_size=(3, 3),
+                           stride=(2, 2),
+                           padding=(1, 1)) for i in range(K)]
         self.convs = nn.ModuleList(convs)
         self.bns = nn.ModuleList(
-            [nn.BatchNorm1d(num_features=hp.ref_enc_filters[i])
+            [nn.BatchNorm2d(num_features=hp.ref_enc_filters[i])
              for i in range(K)])
         self.n_f0_channels = 1
         out_channels = self.calculate_channels(self.n_f0_channels, 3, 2, 1, K) # Final output channel of staked conv layers

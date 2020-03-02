@@ -612,7 +612,7 @@ class Tacotron2(nn.Module):
                 # key = GST[style_input].unsqueeze(0).repeat(1, self.gst.stl.embed.size(0), self.gst.stl.embed.size(1))
                 embedded_gst = self.gst.stl.attention(query, key)
             else:
-                embedded_gst = self.gst(f0s)
+                embedded_gst = self.gst(f0s, embedded_text)
 
         embedded_speakers = embedded_speakers.repeat(1, embedded_text.size(1), 1)
         if hasattr(self, 'gst'):

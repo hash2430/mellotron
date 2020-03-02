@@ -1,6 +1,6 @@
 # meta file이랑 data util 고치기 싫어서 dataset은 그대로 쓰면서 네트워크 훈련에서만 f0를 따돌리겠음!
 import os
-os.environ['CUDA_VISIBLE_DEVICES']='0, 1'
+os.environ['CUDA_VISIBLE_DEVICES']='2,3'
 import time
 import argparse
 import math
