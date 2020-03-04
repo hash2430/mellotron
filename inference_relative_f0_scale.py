@@ -1,13 +1,21 @@
-import matplotlib.pyplot as plt
-import IPython.display as ipd
+'''
+ This inference code normalizes f0 by
+ 1. Subtracting reference f0 mean from reference pitch contour
+ 2. Divide reference pitch contour with reference speaker f0 variance obtained by 'max-min'.
+ 3. Multiply reference pitch contour with target speaker f0 variance
+ 4. Add pitch contour with target speaker f0 mean
+(4-1. If necessary, scale the target f0 mean with 1.1 scalar multiplication for adding)
+ 5. In case - ref_f0 + target_f0 < 0, target minimum f0 is used instead.
+'''
 
+''' 
+TODO: Fitting reference f0 contour into target speaker vocal range (min+alpha, max-beta) by scaling would give more natural result.
+High variance from reference signal gives unnatural sounding result
+'''
 import sys
 sys.path.append('waveglow/')
 
-from itertools import cycle
-import numpy as np
 from scipy.io.wavfile import write
-import pandas as pd
 import librosa
 import torch
 from torch.utils.data import DataLoader
@@ -17,16 +25,16 @@ from train import load_model
 from waveglow.denoiser import Denoiser
 from layers import TacotronSTFT
 from data_utils import TextMelLoader, TextMelCollate
-from text import cmudict, text_to_sequence
-from mellotron_utils import get_data_from_musicxml
+from text import cmudict
 
 hparams = create_hparams()
 hparams.batch_size = 1
 stft = TacotronSTFT(hparams.filter_length, hparams.hop_length, hparams.win_length,
                     hparams.n_mel_channels, hparams.sampling_rate, hparams.mel_fmin,
                     hparams.mel_fmax)
-speaker = "pfo"
-checkpoint_path = '/mnt/sdc1/mellotron/as_is_200217/checkpoint_164000'
+speaker = "fv02"
+checkpoint_path ='/mnt/sdc1/mellotron/as_is_200217/checkpoint_351000'
+f0s_meta_path = '/mnt/sdc1/mellotron/single_init_200123/f0s_combined.txt'
     # "models/mellotron_libritts.pt"
 mellotron = load_model(hparams).cuda().eval()
 mellotron.load_state_dict(torch.load(checkpoint_path)['state_dict'])
@@ -34,7 +42,7 @@ waveglow_path = '/home/admin/projects/mellotron_init_with_single/models/waveglow
 waveglow = torch.load(waveglow_path)['model'].cuda().eval()
 denoiser = Denoiser(waveglow).cuda().eval()
 arpabet_dict = cmudict.CMUDict('data/cmu_dictionary')
-audio_paths = 'data/examples_pfo.txt'
+audio_paths = 'data/examples_pfp.txt'
 test_set = TextMelLoader(audio_paths, hparams)
 datacollate = TextMelCollate(1)
 dataloader = DataLoader(test_set, num_workers=1, shuffle=False,batch_size=hparams.batch_size, pin_memory=False,
@@ -42,8 +50,29 @@ dataloader = DataLoader(test_set, num_workers=1, shuffle=False,batch_size=hparam
 speaker_ids = TextMelLoader("filelists/wav_less_than_12s_158_speakers_train.txt", hparams).speaker_ids
 speaker_id = torch.LongTensor([speaker_ids[speaker]]).cuda()
 
+# Load mean f0
+with open(f0s_meta_path, 'r', encoding='utf-8-sig') as f:
+    f0s_read = f.readlines()
+f0s_mean = {}
+f0s_min = {}
+f0s_max = {}
+f0s_var = {}
+for i in range(len(f0s_read)):
+    line = f0s_read[i].split('|')
+    tmp_speaker = line[0]
+    f0_mean = float(line[-1])
+    f0s_mean[tmp_speaker] = f0_mean
+    f0_min = float(line[1])
+    f0s_min[tmp_speaker] = f0_min
+    f0_max = float(line[2])
+    f0s_max[tmp_speaker] = f0_max
+    f0s_var[tmp_speaker] = f0_max - f0_min
+target_speaker = speaker
+target_spesaker_f0_mean = f0s_mean[target_speaker]
+
 for i, batch in enumerate(dataloader):
     reference_speaker = test_set.audiopaths_and_text[i][2]
+    reference_speaker_f0_mean = f0s_mean[reference_speaker]
     # x: (text_padded, input_lengths, mel_padded, max_len,
     #                  output_lengths, speaker_ids, f0_padded),
     # y: (mel_padded, gate_padded)
@@ -51,6 +80,20 @@ for i, batch in enumerate(dataloader):
     text_encoded = x[0]
     mel = x[2]
     pitch_contour = x[6]
+    # normalize f0 for voiced frames
+    mask = pitch_contour != 0.0
+    pitch_contour[mask] -= reference_speaker_f0_mean
+    pitch_contour[mask] /= f0s_var[reference_speaker]
+    pitch_contour[mask] *= f0s_var[target_speaker]
+    pitch_contour[mask] += target_spesaker_f0_mean
+
+    # take care of negative f0s when reference is female and target is male
+    mask = pitch_contour < 0.0
+    pitch_contour[mask] = f0s_min[target_speaker]
+    tmp_nd = pitch_contour.cpu().numpy()
+    tmp_mask = mask.cpu().numpy()
+
+
 
     with torch.no_grad():
         # get rhythm (alignment map) using tacotron 2
@@ -67,4 +110,4 @@ for i, batch in enumerate(dataloader):
         top_db=25
         for j in range(len(audio)):
             wav, _ = librosa.effects.trim(audio[j], top_db=top_db, frame_length=2048, hop_length=512)
-            write("gen/refer_pitch_rythm_mel/{}/target-{}_refer-{}_topdb-{}_{}.wav".format(reference_speaker, speaker, reference_speaker, top_db, i*hparams.batch_size+j), hparams.sampling_rate, wav)
+            write("gen/refer_pitch_rythm_mel/{}/target-{}_refer-{}_topdb-{}_{}_rel_f0_scale_min_and_max_rescale.wav".format(reference_speaker, speaker, reference_speaker, top_db, i * hparams.batch_size + j), hparams.sampling_rate, wav)

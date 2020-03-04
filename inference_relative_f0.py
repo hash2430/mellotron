@@ -16,7 +16,7 @@ import librosa
 import torch
 from torch.utils.data import DataLoader
 
-from configs.single_init_200123 import create_hparams
+from configs.as_is_200217 import create_hparams
 from train import load_model
 from waveglow.denoiser import Denoiser
 from layers import TacotronSTFT
@@ -28,8 +28,8 @@ hparams.batch_size = 1
 stft = TacotronSTFT(hparams.filter_length, hparams.hop_length, hparams.win_length,
                     hparams.n_mel_channels, hparams.sampling_rate, hparams.mel_fmin,
                     hparams.mel_fmax)
-speaker = "pmk"
-checkpoint_path = '/mnt/sdc1/mellotron/single_init_200123/checkpoint_141000'
+speaker = "pmn"
+checkpoint_path ='/mnt/sdc1/mellotron/as_is_200217/checkpoint_218500'
 f0s_meta_path = '/mnt/sdc1/mellotron/single_init_200123/f0s_combined.txt'
     # "models/mellotron_libritts.pt"
 mellotron = load_model(hparams).cuda().eval()
@@ -38,12 +38,12 @@ waveglow_path = '/home/admin/projects/mellotron_init_with_single/models/waveglow
 waveglow = torch.load(waveglow_path)['model'].cuda().eval()
 denoiser = Denoiser(waveglow).cuda().eval()
 arpabet_dict = cmudict.CMUDict('data/cmu_dictionary')
-audio_paths = 'data/examples_pfo.txt'
+audio_paths = 'data/examples_pfp.txt'
 test_set = TextMelLoader(audio_paths, hparams)
 datacollate = TextMelCollate(1)
 dataloader = DataLoader(test_set, num_workers=1, shuffle=False,batch_size=hparams.batch_size, pin_memory=False,
                         drop_last=False, collate_fn = datacollate)
-speaker_ids = TextMelLoader("/home/admin/projects/mellotron_init_with_single/filelists/merge_korean_pron_train.txt", hparams).speaker_ids
+speaker_ids = TextMelLoader("filelists/wav_less_than_12s_158_speakers_train.txt", hparams).speaker_ids
 speaker_id = torch.LongTensor([speaker_ids[speaker]]).cuda()
 
 # Load mean f0

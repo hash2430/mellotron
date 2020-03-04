@@ -1,0 +1,10 @@
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_0-vlre.wav
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_1-vlre.wav
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_2-vlre.wav
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_3-vlre.wav
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_4-vlre.wav
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_5-vlre.wav
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_6-vlre.wav
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_7-vlre.wav
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_8-vlre.wav
+/home/admin/projects/mellotron_as_is/Visualization/objective_measures/vlre/target-fv02_refer-pfp_topdb-25_9-vlre.wav

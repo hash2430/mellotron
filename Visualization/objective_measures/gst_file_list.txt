@@ -1,0 +1,2 @@
+/home/admin/projects/mellotron_gst/gen/refer_pitch_rythm_mel/pfp/target-pfa_refer-pfp_topdb-25_0-gst_tts.wav
+/home/admin/projects/mellotron_gst/gen/refer_pitch_rythm_mel/pfp/target-pfa_refer-pfp_topdb-25_1-gst_tts.wav

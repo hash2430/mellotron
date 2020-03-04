@@ -119,8 +119,8 @@ def gen_mel_f0(args):
 def preprocess_cal_f0_scale_per_training_speaker(args):
     # root = '/mnt/sdd1/selvas_emotion'
     # root = '/mnt/sdd1/leftout_males'
-    # root = '/mnt/sdd1/leftout_korean_old_male/wav_22050'
-    root = '/mnt/sdd1/korean_public/wav_22050'
+    root = '/mnt/sdd1/leftout_korean_old_male/wav_22050'
+    # root = '/mnt/sdd1/korean_public/wav_22050'
     f0_mean.build_from_path(root, hparams, tqdm=tqdm)
 
 def main():

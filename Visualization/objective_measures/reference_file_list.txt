@@ -1,0 +1,2 @@
+/mnt/sdd1/selvas_wav/pfp/wav_trimmed_22050/pfp00500.wav
+/mnt/sdd1/selvas_wav/pfp/wav_trimmed_22050/pfp00139.wav

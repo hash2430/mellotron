@@ -1,0 +1,2 @@
+/home/admin/projects/mellotron_grl/gen/refer_pitch_rythm_mel/pfp/target-fv02_refer-pfp_topdb-25_0_rel_f0_scale_min_and_max_rescale_grl_02.wav
+/home/admin/projects/mellotron_grl/gen/refer_pitch_rythm_mel/pfp/target-fv02_refer-pfp_topdb-25_1_rel_f0_scale_min_and_max_rescale_grl_02.wav
