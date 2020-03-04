@@ -86,12 +86,18 @@ def DTW(mels, f0s):
     proposed_f0s = (warped_true_f0s3, warped_proposed_f0s)
     grl_f0s = (warped_true_f0s4, warped_grl_f0s)
 
-    non_padded_lens = [[] for i in range(4)]
-    non_padded_lens[0] = [i.shape[0] for i in warped_true_f0s]
-    non_padded_lens[1] = [i.shape[0] for i in warped_true_f0s2]
-    non_padded_lens[2] = [i.shape[0] for i in warped_true_f0s3]
-    non_padded_lens[3] = [i.shape[0] for i in warped_true_f0s4]
-    return gst_mels, vlre_mels, proposed_mels, proposed_grl_mels, gst_f0s, vlre_f0s, proposed_f0s, grl_f0s, non_padded_lens
+    non_padded_f0_lens = [[] for i in range(4)]
+    non_padded_f0_lens[0] = [i.shape[0] for i in warped_true_f0s]
+    non_padded_f0_lens[1] = [i.shape[0] for i in warped_true_f0s2]
+    non_padded_f0_lens[2] = [i.shape[0] for i in warped_true_f0s3]
+    non_padded_f0_lens[3] = [i.shape[0] for i in warped_true_f0s4]
+
+    non_padded_mel_lens = [[] for i in range(4)]
+    non_padded_mel_lens[0] = [i.shape[0] for i in warped_true_mels]
+    non_padded_mel_lens[1] = [i.shape[0] for i in warped_true_mels2]
+    non_padded_mel_lens[2] = [i.shape[0] for i in warped_true_mels3]
+    non_padded_mel_lens[3] = [i.shape[0] for i in warped_true_mels4]
+    return gst_mels, vlre_mels, proposed_mels, proposed_grl_mels, gst_f0s, vlre_f0s, proposed_f0s, grl_f0s, non_padded_mel_lens, non_padded_f0_lens
 
 def align_dtw(s1, s2, dim):
     warped_sequences1 = []
@@ -252,14 +258,48 @@ def FFE(gst_f0s, vlre_f0s, proposed_f0s, grl_f0s, non_padded_lens):
 
     return ffe_gst, ffe_vlre, ffe_proposed, ffe_grl
 
+def mcd(target_mels, out_mels, true_lens):
+    # MCD13: mse along 13 dims. Exclude 0th mel to make it indifferent of overall energy scale.
+    # Use unpadded true lens for denominator
+    lens = [target_mels_.shape[0] for target_mels_ in target_mels]
+    max_len = max(lens)
+    for i in range(len(target_mels)):
+        if lens[i] < max_len:
+            pad_width = [[0, max_len - lens[i]], [0, 0]]
+            target_mels[i] = np.pad(target_mels[i], pad_width)
+            out_mels[i] = np.pad(out_mels[i], pad_width)
+
+    out_mels = torch.from_numpy(np.stack(out_mels)).squeeze()[:,:,1:14]
+    target_mels = torch.from_numpy(np.stack(target_mels)).squeeze()[:,:,1:14]
+    diff = out_mels - target_mels
+    diff_sq = diff**2
+    tmp = diff_sq.sum(dim=-1).squeeze()
+    tmp = torch.sqrt(tmp)
+    tmp = tmp.sum()
+    numerator = tmp
+    denominator = torch.FloatTensor([sum(true_lens)])
+    mcd = numerator / denominator
+    # Google's work does not multiply K
+    # "Towards End-to-End Prosody Transfer for Expressive Speech Synthesis with Tacotron"
+    # K = 10 / np.log(10) * np.sqrt(2)
+    return mcd
+
+def MCD(gst_mels, vlre_mels, proposed_mels, proposed_grl_mels, non_padded_mel_lens):
+    gst_mcd = mcd(gst_mels[0], gst_mels[1], non_padded_mel_lens[0])
+    vlre_mcd = mcd(vlre_mels[0], vlre_mels[1], non_padded_mel_lens[1])
+    proposed_mcd = mcd(proposed_mels[0], proposed_mels[1], non_padded_mel_lens[2])
+    grl_mcd = mcd(proposed_grl_mels[0], proposed_grl_mels[1], non_padded_mel_lens[3])
+    return gst_mcd, vlre_mcd, proposed_mcd, grl_mcd
 
 if __name__ == '__main__':
     mels, f0s = load() # list of list of tensors
-    gst_mels, vlre_mels, proposed_mels, proposed_grl_mels, gst_f0s, vlre_f0s, proposed_f0s, grl_f0s, non_padded_lens = DTW(mels, f0s)
+    gst_mels, vlre_mels, proposed_mels, proposed_grl_mels, gst_f0s, vlre_f0s, proposed_f0s, grl_f0s, non_padded_mel_lens, non_padded_f0_lens = DTW(mels, f0s)
     GPEs = GPE(gst_f0s, vlre_f0s, proposed_f0s, grl_f0s)
-    VDEs = VDE(gst_f0s, vlre_f0s, proposed_f0s, grl_f0s, non_padded_lens)
-    FFEs = FFE(gst_f0s, vlre_f0s, proposed_f0s, grl_f0s, non_padded_lens)
+    VDEs = VDE(gst_f0s, vlre_f0s, proposed_f0s, grl_f0s, non_padded_f0_lens)
+    FFEs = FFE(gst_f0s, vlre_f0s, proposed_f0s, grl_f0s, non_padded_f0_lens)
+    MCDs = MCD(gst_mels, vlre_mels, proposed_mels, proposed_grl_mels, non_padded_mel_lens)
     print("    {:^10} {:^10} {:^10} {:^10}".format("GST", "VLRE", "PROPOSED", "P_GRL"))
     print("GPEs: {:7.2f}%, {:7.2f}%, {:7.2f}%, {:7.2f}%\n".format(GPEs[0].item()*100, GPEs[1].item()*100, GPEs[2].item()*100, GPEs[3].item()*100))
     print("VDEs: {:7.2f}%, {:7.2f}%, {:7.2f}%, {:7.2f}%\n".format(VDEs[0].item()*100, VDEs[1].item()*100, VDEs[2].item()*100, VDEs[3].item()*100))
     print("FFEs: {:7.2f}%, {:7.2f}%, {:7.2f}%, {:7.2f}%\n".format(FFEs[0].item()*100, FFEs[1].item()*100, FFEs[2].item()*100, FFEs[3].item()*100))
+    print("MCDs: {:5.2f} dB, {:5.2f} dB, {:5.2f} dB, {:5.2f} dB\n".format(MCDs[0].item(), MCDs[1].item(), MCDs[2].item(), MCDs[3].item()))
